@@ -4,113 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ta Luego Cuadernos | Productos</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <meta name="description" content="Conocé los productos que ofrecemos en Ta Luego y elegí el que mas se adapte a tus necesidades">
+    <meta name="keywords" content="Agenda, Docente, Interiores, Diseño, Personalizado, Unisex, Viajes, Dibujo"> 
+    <title>Productos | Ta Luego</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Googel Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/99c6c0aaff.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header> 
-        <div class="logoSinFondo">
-            <a href="../Index.html" >
-               <img src="../img/logoSinFondo.png" alt="Logo">
+    <header class="header"> 
+        <div class="logo d-none d-md-block ">
+            <a href="../Index.html" class="logo__link" >
+               <img src="../img/logoSinFondo.png" alt="Ta Luego Cuadernos" class="logo__link--posicion">
             </a>
         </div>    
-        
-        <nav class="navbar navbar-expand-lg navbar-dark fondoNav">
-            <div class="container-fluid" >
-              <a class="navbar-brand" href="../Index.html">Ta Luego</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../Index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="./Cuadernos A4.html">Cuadernos A4</a></li>
-                      <li><a class="dropdown-item" href="./Cuadernos A5.html">Cuadernos A5</a></li>
-                      <li><a class="dropdown-item" href="./Pizarras.html">Pizarras Magneticas</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Contacto.html">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-
     </header>
-    <main class="fondoProductos">
-        <h2>Productos</h2>
-        
-        <!-- Cuadernos A4 -->    
-        
-        <section class="presentProductos">
-            <a class="linkTarjeta" href="Cuadernos A4.html">    
-                <h3 class="titulos" id="tit-A4">Cuadernos A4</h3>
-                <div class="contenedorImagen" id="A4">
-                    <img src="../img/CuadernoA4.jpeg" alt="Imagen Cuadernos A4" class="imagen">
-                </div>    
-                <div class="textoTarjeta" id="descripcion-A4">
-                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem modi exercitationem facere sapiente ipsa, perspiciatis, id omnis voluptatum nesciunt ut atque est laudantium dolor magni velit, eveniet officiis non deserunt?</p>
+    <nav class="fondonav">
+        <div class="navbar  navbar-expand-md navbar-dark nav-fondonav ">
+            <div class="container-fluid nav-fondonav" >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../Index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./CuadernosA4.html">Cuadernos A4</a></li>
+                                <li><a class="dropdown-item" href="./CuadernosA5.html">Cuadernos A5</a></li>
+                                <li><a class="dropdown-item" href="./Pizarras.html">Pizarras Magneticas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            </a>
-            <!-- Cuadernos A5 -->
-            <a class="linkTarjeta" href="Cuadernos A5.html">
-                <h3 class="titulos" id="tit-A5">Cuadernos A5</h3>
-                <div class="contenedorImagen" id="A5">
-                    <img src="../img/CuadernoA5.jpg" alt="Imagen Cuadernos A5">
-                </div>    
-                <div class="textoTarjeta" id="descripcion-A5">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe laborum nostrum odio commodi sint veniam officia, possimus nihil in iure explicabo quod ut recusandae illum? Nemo numquam molestiae quidem aspernatur ea! Deserunt distinctio cumque provident placeat odio vitae omnis? Ratione.</p>
-                    
-                </div>
-            </a>
-            <!-- Pizarras -->
-        
-            <a class="linkTarjeta" href="Pizarras.html">
-                    <div class="titulos" id="tit-Anotadores">
-                        <h3>Pizarras Magnéticas</h3>
-                    </div>    
-                    <div class="contenedorImagen" id="Anotadores">
-                        <img src="../img/PizarraMagnet.jpeg" alt="Imagen Pizarras">
-                    </div>
-                    <div class="textoTarjeta" id="descripcion-Anotadores">    
-                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero optio placeat beatae, dolores porro molestiae aliquid sapiente, eum natus pariatur modi aspernatur dicta? Perspiciatis pariatur nulla, placeat cupiditate ut facere sit consectetur corporis autem ipsam nihil architecto, vero dolorem. Itaque molestiae.</p>
-                    </div>
-            </a>
-        </section>
-
-    </main>
-    <footer>
-        <div id="contacto">
-            <button class="redesContacto"><i class="fab fa-instagram"></i></button>  
-            <button class="redesContacto"><a href="./Contacto.html"><i class="fas fa-envelope"></i></a></button> 
-            <button class="redesContacto"><i class="fab fa-whatsapp"></i></button>  
+            </div>
         </div>
-    &copy; Ta luego cuadernos 2021
-        <div id="emprendmientosAmigos">
-            <h5>Emprendimientos amigos</h5>
-            <li>emprendimiento1</li>
-            <li>emprendimiento2</li>
-            <li>emprendimiento3</li>
-            <li>emprendimiento4</li>
-            <li>emprendimiento5</li>
+    </nav>
+
+    <main class="main mainProductos">
+        <section class="imgPresenteacion">
+            <div class="bgimg"></div>
+        </section>
+        <div class="main__titulo">
+            <h1 class="main__titulo--modtit">Productos</h1>
+        </div>
+        
+        <!-- Cuadernos A4 -->
+        <section class="paginaProductos">
+
+            <div class="container-fluid">
+                <a href="./CuadernosA4.html" class="producto">
+                    <div class="producto__titulo" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h2 class="prodcuto__titulo--modtit" >Cuadernos A4</h2>
+                    </div>
+                    <div class="producto__imagen" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <img src="../img/paginaProductos/CuadernoA4.jpg" alt="Imagen Cuadernos A4" width="500px" height="500px" class="imagen">
+                    </div>    
+                    <div class="producto__descripcion" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <p class="producto__descripcion--modp" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem modi exercitationem facere sapiente ipsa, perspiciatis, id omnis voluptatum nesciunt ut atque est laudantium dolor magni velit, eveniet officiis non deserunt?</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Cuadernos A5 -->    
+            <div class="container-fluid">
+                <a href="./CuadernosA5.html" class="producto">
+                    <div class="producto__titulo" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h2 class="prodcuto__titulo--modtit" >Cuadernos A5</h2>
+                    </div>
+                    <div class="producto__imagen" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <img src="../img/fotosParaHome/segundoCurado/homeCinco.jpg" alt="Imagen Cuadernos A4" class="imagen">
+                    </div>    
+                    <div class="producto__descripcion" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <p class="producto__descripcion--modp" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem modi exercitationem facere sapiente ipsa, perspiciatis, id omnis voluptatum nesciunt ut atque est laudantium dolor magni velit, eveniet officiis non deserunt?</p>
+                    </div>
+                </a>
+            </div>
+            <!-- pizarras -->    
+            <div class="container-fluid">
+                <a href="./Pizarras.html" class="producto">
+                    <div class="producto__titulo" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <h2 class="prodcuto__titulo--modtit" >Pizarras Magneticas</h2>
+                    </div>
+                    <div class="producto__imagen" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <img src="../img/paginaProductos/Pizarra.jpg" alt="Imagen Cuadernos A4" class="imagen">
+                    </div>    
+                    <div class="producto__descripcion" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <p class="producto__descripcion--modp" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem modi exercitationem facere sapiente ipsa, perspiciatis, id omnis voluptatum nesciunt ut atque est laudantium dolor magni velit, eveniet officiis non deserunt?</p>
+                    </div>
+                </a>
+            </div>
+        </section>    
+    </main>
+    <footer class="container-fluid footer"> 
+        <div class="footer__contacto">
+            <button class="footer__contacto--modlogo1"> <i class="fab fa-instagram"></i></button>  
+            <button class="footer__contacto--modlogo2"><a href="./Contacto.html"><i class="fas fa-envelope"></i></a></button>  
+            <button class="footer__contacto--modlogo3"><i class="fab fa-whatsapp"></i></button>  
+        </div>
+        &copy; Ta luego cuadernos 2021
+        <div class="emprendimientos">
+            <h5 class="emprendimientos__titulo">Emprendimientos amigos</h5>
+            <ul class="emprendimientos__listado">
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento1</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento2</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento3</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento4</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento5</li>
+                </a>
+                
+            </ul>
         </div>
 
 
     </footer>
+    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -1,0 +1,237 @@
+@import "partials";
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: $tipografiaPrimaria;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+@import "header";
+@import "footer";
+/*------------------------------------------------------- Estilos de Index----------------------------------------------- */
+body {
+    width: 100%;
+    margin: auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2343bda0' fill-opacity='0.39' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    
+}
+@mixin titulos ($bgColor:$bgTitulos){
+    text-align: center;
+    color: $colorTextoTitulos;
+    background-color: $bgColor;
+
+}
+@mixin paramain {
+    padding-top: 10px; 
+    background-color: $bgBody;
+    margin: auto;
+}
+.main {
+    @include paramain;
+    
+    .main__titulo--modtit {
+        margin-top: 10px ;
+       @include titulos;
+    }
+}
+/* Seccion Banner */
+.bannerhome{
+    overflow: hidden;
+    .bannerhome__tarjeta--tit {
+        color: white;
+        text-align: center;
+        background-color: $bgSectionColor;
+        width: 100%;
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+    .bannerhome__tarjeta--img {
+        width: 100%;
+        border-top-left-radius:10px ;
+        border-top-right-radius:10px ;
+        }
+    .bannerhome__tarjeta--img2 {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+    
+    
+        
+
+/* Seccion Nosotros */
+.nos__titulo--modtit {
+    @include titulos;
+    margin: 0px;
+}
+.nos__contenedor {
+    
+   
+    .nos__contenedor--animacion {
+        background-color: $colorLogo;
+        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: vibracion 2s infinite;
+    
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            border: 2px solid white;
+            font-weight: 800;
+            border-radius: 10px;
+        }
+        a:hover {
+            background-color: white;
+            color: $colorLogo;
+        }
+        
+    }
+    .nos__contenedor--animacion:hover {
+
+        animation: animadiv 3s 1 forwards;
+    }
+       
+    .nos__contenedor--modp {
+        width: 60vw;
+        padding: 10px;
+        background-color: $bgBody;
+        text-align: justify;
+        font-size:$fontsizeParrafos;
+        color: $colorLogo;
+        font-weight: 700;
+    }
+}
+/* Seccion Redes */    
+.redesig__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:$bgTitulos;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .redesig__titulo--modtit {
+        background-color: $bgTitulos;
+        color: $colorTextoTitulos;
+        padding-left: 15px;
+    }
+    .redesig__logo--modlogo {
+        width: 60px;
+        height: 60px;
+        background-color:$bgTitulos;
+    }
+}
+.redesig__embebidoig {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}  
+        
+/* ---------------------------------------------Estilos Productos------------------------------------------------------- */
+
+
+.producto__titulo, .producto__imagen, .producto__descripcion {
+    position: relative;
+}
+.mainProductos {
+    
+}
+.bgimg {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/Carousel/carousel7.jpg);
+    background-size: cover;
+    opacity: 0.3;
+    transition: height, opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+}
+.bgimg:hover {
+    transition: height, opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+    height: 1000px; 
+    opacity: 1;
+}
+
+.producto {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80vh;
+    .producto__titulo {
+       @include titulos (pink);
+       width: 200px;
+       height: 80px;
+       left: 500px;
+       bottom: 90px;
+       z-index: 1;
+        .producto__titulo--modtit {
+            font-size: 25px;
+           
+        }
+    }
+    .producto__imagen {
+        top: 100px;
+        img {
+            transform: scale(1);
+            transition: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            
+        }
+        img:hover {
+            transition: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            transform: scale(1.2);
+        }
+    }
+    .producto__descripcion {
+        background-color: $colorLogo;
+        width: 300px;
+        right: 205px;
+        top: 100px;
+        color: white;
+        font-weight: 800;
+        font-size: 25;
+        
+    }
+}
+
+
+
+/* -----------------------Animaciones---------------------------------------------------------------------------------- */
+@keyframes animadiv {
+    0% {
+        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
+    }
+    
+    100% {
+        clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
+    }
+}
+
+@keyframes vibracion {
+    0% {
+        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
+    }
+   
+    50% {clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);}
+
+    100% {clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);}
+    
+    
+}

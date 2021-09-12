@@ -1,0 +1,24 @@
+footer {
+    border-top: 3px solid $colorLogo;
+    background-color: $bgBody;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@mixin logosRedes {
+    font-size: 30px;
+    border: none;
+    background-color: $bgBody;
+    color: $colorLogo;
+    }   
+@for $i from 0 to 3 {
+    .footer__contacto--modlogo#{$i + 1} {
+        @include logosRedes;
+    }
+}
+    
+.emprenimientos__listado--item {
+        font-size: 13px;
+        color: $colorLogo;
+    }

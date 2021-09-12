@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    background-color: $bgBody;
+}
+.logo {
+    background-color: $bgBody;
+    padding: 5px;
+    .logo__link {
+        .logo__link--posicion {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+    }
+}
+.fondonav {
+    background-color:  $colorLogo;
+    position: sticky;
+    top: 0px; 
+    z-index:1; 
+}
+.nav-fondonav {
+    background-color:  $colorLogo;
+}
