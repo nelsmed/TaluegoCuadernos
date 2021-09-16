@@ -136,42 +136,65 @@ body {
     
 }  
         
-/* ---------------------------------------------Estilos Productos------------------------------------------------------- */
-
-
-.mainProductos {
-    height: 100vh;
-}
-
-/* .bgimg {
-    width: 100%;
-    height: 200px;
-    background-image: url(../img/Carousel/carousel7.jpg);
-    background-size:contain;
-    opacity: 0.3;
-}
-.bgimg:hover {
-    transition: height, opacity;
-    transition-duration: 1.5s;
-    transition-timing-function: ease;
-    height: 1000px; 
-    opacity: 1;
-} */
-
-
+/* --------------------------------------------Estilos Productos------------------------------------------------------- */
 .producto {
     width: 100%;
-    overflow: hidden;
     height: 80vh;
     margin-bottom : 10px;
     position: relative;
+   
+    .contenedor {
+        overflow: hidden;
+        position: relative;
+        width: 40%;
+        height: 15%;
+        background-color: purple;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contenedor div {
+        width: 600px;
+        height: 600px;
+        background-color: powderblue;
+        border-radius: 50%;
+        position: absolute;
+        top: 40%;
+        transform: scale(0.3) ;
+        transition: all 300ms;
+        z-index: 7;
+        opacity: 1
+        
+    }
+    
+    
+    a:hover .contenedor div {
+        transform: scale(1) translateX(60%) translateY(-20%);
+        opacity: 1;
+
+    }
+    a:hover .producto__imagen {
+        transform: scale(1.1);
+        
+    }
+    a:hover p {
+        opacity: 1;
+    }
+    p {
+        position:absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+        opacity: 0
+    }
     .producto__titulo {
        @include titulos (pink);
        width: 230px;
        position: absolute;
        left: 25%;
        top: 12%;
-       z-index: 1;
+       z-index: 4;
        border-radius: 5px;
        box-shadow: -4px 4px 11px 0px pink;
        
@@ -183,14 +206,12 @@ body {
         position:absolute;
         left: 30%;
         bottom: 15%;
-       
-        img:hover {
-            transition: transform;
-            transition-duration: .3s;
-            transition-timing-function: linear;
-            transform: scale(1.07);
-        }
+        z-index: 2;
+        /* clip-path: polygon(0% 0%, 55% 25%, 100% 50%, 53% 78%, 0% 100%); */
+        
     }
+    
+    
     .producto__descripcion {
         background-color: $colorLogo;
         width: 300px;
@@ -202,6 +223,8 @@ body {
         top: 70%;
         border-radius: 5px;
         box-shadow: -4px 4px 11px 0px $bgTitulos;
+        z-index: 3;
+        
         
     }
 }
