@@ -142,52 +142,74 @@ body {
     height: 80vh;
     margin-bottom : 10px;
     position: relative;
-   
-    .contenedor {
-        overflow: hidden;
-        position: relative;
-        width: 40%;
-        height: 15%;
-        background-color: purple;
-        top: 60%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .contenedor div {
-        width: 600px;
-        height: 600px;
-        background-color: powderblue;
-        border-radius: 50%;
+}
+    
+.contenedor {
+    overflow: hidden;
+    position: absolute;
+    width: 528px;
+    height: 600px;
+    background: url(../img/paginaProductos/libreria.jpg);
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    &::before {
+        content: "";
+        width: 100%;
+        height: 300px;
+        background-color: $colorLogo;
         position: absolute;
-        top: 40%;
-        transform: scale(0.3) ;
-        transition: all 300ms;
+        bottom: 100%;
+        transition: all 0.5s;
         z-index: 7;
-        opacity: 1
-        
+        opacity: 0.7;
     }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 300px;
+        background-color: $colorLogo;
+        position: absolute;
+        top: 100%;
+        transition: all 0.5s;
+        z-index: 7;
+        opacity: 0.7;
+    }
+}
     
     
-    a:hover .contenedor div {
-        transform: scale(1) translateX(60%) translateY(-20%);
-        opacity: 1;
+    
+a:hover .contenedor::before {
+    transform: scale(1) translateY(100%);
+    }
+a:hover .contenedor::after {
+    transform: scale(1) translateY(-100%);
+    }
 
+a:hover span {
+    opacity: 1;
+}
+span {
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    opacity: 0;
+    color: $colorTextoTitulos;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid white;
+    z-index: 8;
+    border-radius: 10px;
+    &:hover {
+        background-color: #fff;
+        color: $colorLogo
     }
-    a:hover .producto__imagen {
-        transform: scale(1.1);
-        
-    }
-    a:hover p {
-        opacity: 1;
-    }
-    p {
-        position:absolute;
-        top: 45%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 6;
-        opacity: 0
-    }
+
+}
+
     .producto__titulo {
        @include titulos (pink);
        width: 230px;

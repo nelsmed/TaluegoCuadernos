@@ -222,49 +222,60 @@ body {
   position: relative;
 }
 
-.producto .contenedor {
+.contenedor {
   overflow: hidden;
-  position: relative;
-  width: 40%;
-  height: 15%;
-  background-color: purple;
-  top: 60%;
+  position: absolute;
+  width: 528px;
+  height: 600px;
+  background: url(../img/paginaProductos/libreria.jpg);
+  background-repeat: no-repeat;
   left: 50%;
+  top: 10%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.producto .contenedor div {
-  width: 600px;
-  height: 600px;
-  background-color: powderblue;
-  border-radius: 50%;
+.contenedor::before {
+  content: "";
+  width: 100%;
+  height: 300px;
+  background-color: #43bda0;
   position: absolute;
-  top: 40%;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  bottom: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   z-index: 7;
+  opacity: 0.7;
+}
+
+.contenedor::after {
+  content: "";
+  width: 100%;
+  height: 300px;
+  background-color: #43bda0;
+  position: absolute;
+  top: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 7;
+  opacity: 0.7;
+}
+
+a:hover .contenedor::before {
+  -webkit-transform: scale(1) translateY(100%);
+          transform: scale(1) translateY(100%);
+}
+
+a:hover .contenedor::after {
+  -webkit-transform: scale(1) translateY(-100%);
+          transform: scale(1) translateY(-100%);
+}
+
+a:hover span {
   opacity: 1;
 }
 
-.producto a:hover .contenedor div {
-  -webkit-transform: scale(1) translateX(60%) translateY(-20%);
-          transform: scale(1) translateX(60%) translateY(-20%);
-  opacity: 1;
-}
-
-.producto a:hover .producto__imagen {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.producto a:hover p {
-  opacity: 1;
-}
-
-.producto p {
+span {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -272,9 +283,20 @@ body {
           transform: translateX(-50%);
   z-index: 6;
   opacity: 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 2px solid white;
+  z-index: 8;
+  border-radius: 10px;
 }
 
-.producto .producto__titulo {
+span:hover {
+  background-color: #fff;
+  color: #43bda0;
+}
+
+.producto__titulo {
   text-align: center;
   color: white;
   background-color: pink;
@@ -288,11 +310,11 @@ body {
           box-shadow: -4px 4px 11px 0px pink;
 }
 
-.producto .producto__titulo .producto__titulo--modtit {
+.producto__titulo .producto__titulo--modtit {
   font-size: 25px;
 }
 
-.producto .producto__imagen {
+.producto__imagen {
   position: absolute;
   left: 30%;
   bottom: 15%;
@@ -300,7 +322,7 @@ body {
   /* clip-path: polygon(0% 0%, 55% 25%, 100% 50%, 53% 78%, 0% 100%); */
 }
 
-.producto .producto__descripcion {
+.producto__descripcion {
   background-color: #43bda0;
   width: 300px;
   position: absolute;
