@@ -215,6 +215,24 @@ body {
 }
 
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
+.cuadernoA4 {
+  background: url(../img/paginaProductos/CuadernoA4.jpg);
+  background-position: center;
+  background-size: 600px;
+}
+
+.cuadernoA5 {
+  background: url(../img/paginaProductos/CuadernoA5.jpg);
+  background-position: center;
+  background-size: 600px;
+}
+
+.pizarra {
+  background: url(../img/paginaProductos/libreria.jpg);
+  background-position: center;
+  background-size: 600px;
+}
+
 .producto {
   width: 100%;
   height: 80vh;
@@ -225,9 +243,8 @@ body {
 .contenedor {
   overflow: hidden;
   position: absolute;
-  width: 528px;
+  width: 600px;
   height: 600px;
-  background: url(../img/paginaProductos/libreria.jpg);
   background-repeat: no-repeat;
   left: 50%;
   top: 10%;
@@ -239,26 +256,25 @@ body {
   content: "";
   width: 100%;
   height: 300px;
-  background-color: #43bda0;
+  background-color: #777a834d;
   position: absolute;
-  bottom: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 7;
-  opacity: 0.7;
+  bottom: 100%;
 }
 
 .contenedor::after {
   content: "";
   width: 100%;
   height: 300px;
-  background-color: #43bda0;
+  background-color: #777a834d;
   position: absolute;
-  top: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 7;
-  opacity: 0.7;
+  right: 0%;
+  top: 100%;
 }
 
 a:hover .contenedor::before {
@@ -276,11 +292,9 @@ a:hover span {
 }
 
 span {
-  position: absolute;
+  position: relative;
   top: 45%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 12%;
   z-index: 6;
   opacity: 0;
   color: white;

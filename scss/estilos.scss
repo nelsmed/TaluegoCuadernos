@@ -137,6 +137,15 @@ body {
 }  
         
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
+$tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
+
+@each $producto, $url in $tipoProducto {
+    .#{$producto} {
+        background: $url;
+        background-position: center;
+        background-size: 600px;
+    }
+}
 .producto {
     width: 100%;
     height: 80vh;
@@ -147,34 +156,29 @@ body {
 .contenedor {
     overflow: hidden;
     position: absolute;
-    width: 528px;
+    width: 600px;
     height: 600px;
-    background: url(../img/paginaProductos/libreria.jpg);
     background-repeat: no-repeat;
     left: 50%;
     top: 10%;
     transform: translateX(-50%);
-    &::before {
+    @mixin pseudos {
         content: "";
         width: 100%;
         height: 300px;
-        background-color: $colorLogo;
+        background-color: $bgSectionColor;
         position: absolute;
-        bottom: 100%;
         transition: all 0.5s;
         z-index: 7;
-        opacity: 0.7;
+    }
+    &::before {
+        @include pseudos;
+        bottom: 100%;
     }
     &::after {
-        content: "";
-        width: 100%;
-        height: 300px;
-        background-color: $colorLogo;
-        position: absolute;
+        @include pseudos;
+        right: 0%;
         top: 100%;
-        transition: all 0.5s;
-        z-index: 7;
-        opacity: 0.7;
     }
 }
     
@@ -191,10 +195,9 @@ a:hover span {
     opacity: 1;
 }
 span {
-    position:absolute;
+    position: relative;
     top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 12%;
     z-index: 6;
     opacity: 0;
     color: $colorTextoTitulos;
