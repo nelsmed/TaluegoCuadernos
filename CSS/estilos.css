@@ -197,7 +197,8 @@ body {
   margin-bottom: 10px;
 }
 
-.redesig__titulo .redesig__titulo--modtit {
+.redesig__titulo git
+.redesig__titulo--modtit {
   background-color: #43bda0;
   color: white;
   padding-left: 15px;
@@ -207,11 +208,6 @@ body {
   width: 60px;
   height: 60px;
   background-color: #43bda0;
-}
-
-.redesig__embebidoig {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
@@ -400,6 +396,17 @@ span:hover {
   100% {
     -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
             clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
+  }
+}
+
+/* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
+/* Index */
+@media (min-width: 767.98px) {
+  .nos__contenedor--modp {
+    font-size: 1rem;
+  }
+  .nos__contenedor--animacion {
+    display: none;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

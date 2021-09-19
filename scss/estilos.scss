@@ -272,3 +272,17 @@ span {
     
     
 }
+
+/* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
+
+/* Index */
+
+@media (min-width:767.98px) {
+    .nos__contenedor--modp {
+        font-size: 1rem;
+    }
+    .nos__contenedor--animacion {
+        display: none;
+    }
+    
+}
