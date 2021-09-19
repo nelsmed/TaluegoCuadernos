@@ -118,7 +118,7 @@ body {
     align-items: center;
     background-color:$bgTitulos;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;git 
     .redesig__titulo--modtit {
         background-color: $bgTitulos;
         color: $colorTextoTitulos;
@@ -130,11 +130,6 @@ body {
         background-color:$bgTitulos;
     }
 }
-.redesig__embebidoig {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-}  
         
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
 $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
