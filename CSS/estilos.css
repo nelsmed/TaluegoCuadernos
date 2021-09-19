@@ -170,13 +170,30 @@ body {
 }
 
 .nos__contenedor .nos__contenedor--modp {
-  width: 60vw;
+  width: 90vw;
   padding: 10px;
   background-color: #f6f5dd;
   text-align: justify;
-  font-size: 25px;
   color: #43bda0;
   font-weight: 700;
+  font-size: 2rem;
+}
+
+.nos__contenedor .botonResponsive {
+  color: #43bda0;
+  font-size: 20px;
+  border: 2px solid #43bda0;
+  font-weight: 800;
+  border-radius: 10px;
+  background-color: #f6f5dd;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.nos__contenedor .botonResponsive:hover {
+  background-color: white;
+  color: #43bda0;
 }
 
 /* Seccion Redes */
@@ -197,8 +214,7 @@ body {
   margin-bottom: 10px;
 }
 
-.redesig__titulo git
-.redesig__titulo--modtit {
+.redesig__titulo .redesig__titulo--modtit {
   background-color: #43bda0;
   color: white;
   padding-left: 15px;
@@ -232,8 +248,8 @@ body {
 .producto {
   width: 100%;
   height: 80vh;
-  margin-bottom: 10px;
   position: relative;
+  padding-top: 200px;
 }
 
 .contenedor {
@@ -403,7 +419,7 @@ span:hover {
 /* Index */
 @media (min-width: 767.98px) {
   .nos__contenedor--modp {
-    font-size: 1rem;
+    font-size: 12px;
   }
   .nos__contenedor--animacion {
     display: none;
