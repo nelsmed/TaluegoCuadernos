@@ -146,8 +146,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: vibracion 2s infinite;
-          animation: vibracion 2s infinite;
+  -webkit-animation: vibracion .5s infinite;
+          animation: vibracion .5s infinite;
 }
 
 .nos__contenedor .nos__contenedor--animacion a {
@@ -165,8 +165,8 @@ body {
 }
 
 .nos__contenedor .nos__contenedor--animacion:hover {
-  -webkit-animation: animadiv 3s 1 forwards;
-          animation: animadiv 3s 1 forwards;
+  -webkit-animation: animadiv 1s 1 forwards;
+          animation: animadiv 1s 1 forwards;
 }
 
 .nos__contenedor .nos__contenedor--modp {
@@ -249,7 +249,7 @@ body {
   width: 100%;
   height: 80vh;
   position: relative;
-  padding-top: 200px;
+  margin-bottom: 200px;
 }
 
 .contenedor {
@@ -416,13 +416,107 @@ span:hover {
 }
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
-/* Index */
-@media (min-width: 767.98px) {
-  .nos__contenedor--modp {
-    font-size: 12px;
+/* Productos */
+@media (max-width: 768px) {
+  .cuadernoA4 {
+    background: url(../img/paginaProductos/CuadernoA4.jpg);
+    background-position: center;
+    background-size: 400px;
   }
-  .nos__contenedor--animacion {
-    display: none;
+  .cuadernoA5 {
+    background: url(../img/paginaProductos/CuadernoA5.jpg);
+    background-position: center;
+    background-size: 400px;
+  }
+  .pizarra {
+    background: url(../img/paginaProductos/libreria.jpg);
+    background-position: center;
+    background-size: 400px;
+  }
+  .contenedor {
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+  .contenedor::before {
+    bottom: 100%;
+  }
+  .contenedor::after {
+    right: 0%;
+    top: 100%;
+  }
+  a:hover .contenedor::before {
+    -webkit-transform: scale(1) translateY(67%);
+            transform: scale(1) translateY(67%);
+  }
+  a:hover .contenedor::after {
+    -webkit-transform: scale(1) translateY(-66.4%);
+            transform: scale(1) translateY(-66.4%);
+  }
+  span {
+    position: relative;
+    top: 45%;
+    left: 25%;
+    font-size: 1rem;
+  }
+  span:hover {
+    background-color: #fff;
+    color: #43bda0;
+  }
+  .producto__descripcion {
+    left: 40%;
+    top: 70%;
+  }
+}
+
+@media (max-width: 426px) {
+  .cuadernoA4 {
+    background: url(../img/paginaProductos/CuadernoA4.jpg);
+    background-position: center;
+    background-size: 400px;
+  }
+  .cuadernoA5 {
+    background: url(../img/paginaProductos/CuadernoA5.jpg);
+    background-position: center;
+    background-size: 400px;
+  }
+  .pizarra {
+    background: url(../img/paginaProductos/libreria.jpg);
+    background-position: center;
+    background-size: 400px;
+  }
+  .contenedor {
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+  .contenedor::before {
+    bottom: 100%;
+  }
+  .contenedor::after {
+    right: 0%;
+    top: 100%;
+  }
+  a:hover .contenedor::before {
+    -webkit-transform: scale(1) translateY(67%);
+            transform: scale(1) translateY(67%);
+  }
+  a:hover .contenedor::after {
+    -webkit-transform: scale(1) translateY(-66.4%);
+            transform: scale(1) translateY(-66.4%);
+  }
+  span {
+    position: relative;
+    top: 45%;
+    left: 25%;
+    font-size: 1rem;
+  }
+  span:hover {
+    background-color: #fff;
+    color: #43bda0;
+  }
+  .producto__descripcion {
+    left: 18%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

@@ -79,7 +79,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: vibracion 2s infinite;
+        animation: vibracion .5s infinite;
     
         a{
             text-decoration: none;
@@ -97,7 +97,7 @@ body {
     }
     .nos__contenedor--animacion:hover {
 
-        animation: animadiv 3s 1 forwards;
+        animation: animadiv 1s 1 forwards;
     }
        
     .nos__contenedor--modp {
@@ -148,7 +148,7 @@ body {
         background-color:$bgTitulos;
     }
 }
-        
+
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
 $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
 
@@ -164,7 +164,16 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
     width: 100%;
     height: 80vh;
     position: relative;
-    padding-top: 200px;
+    margin-bottom: 200px;
+}
+@mixin pseudos {
+    content: "";
+    width: 100%;
+    height: 300px;
+    background-color: $bgSectionColor;
+    position: absolute;
+    transition: all 0.5s;
+    z-index: 7;
 }
     
 .contenedor {
@@ -176,15 +185,7 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
     left: 50%;
     top: 10%;
     transform: translateX(-50%);
-    @mixin pseudos {
-        content: "";
-        width: 100%;
-        height: 300px;
-        background-color: $bgSectionColor;
-        position: absolute;
-        transition: all 0.5s;
-        z-index: 7;
-    }
+    
     &::before {
         @include pseudos;
         bottom: 100%;
@@ -294,14 +295,95 @@ span {
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
 
-/* Index */
+/* Productos */
 
-@media (min-width:767.98px) {
-    .nos__contenedor--modp {
-        font-size: 12px;
+
+@media (max-width: 768px) {
+    $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
+    @each $producto, $url in $tipoProducto {
+        .#{$producto} {
+            background: $url;
+            background-position: center;
+            background-size: 400px;
+            
+        }
     }
-    .nos__contenedor--animacion {
-        display: none;
+    .contenedor {
+        width: 400px;
+        height: 400px;
+        background-repeat: no-repeat;
+        &::before {
+            bottom: 100%;
+        }
+        &::after {
+            right: 0%;
+            top: 100%;
+        }
+
     }
+    a:hover .contenedor::before {
+        transform: scale(1) translateY(67%);
+    }
+    a:hover .contenedor::after {
+        transform: scale(1) translateY(-66.4%);
+    }
+    span {
+        position: relative;
+        top: 45%;
+        left: 25%;
+        font-size: 1rem;
+        &:hover {
+            background-color: #fff;
+            color: $colorLogo
+        }
     
+    }
+    .producto__descripcion {
+        left: 40%;
+        top: 70%;
+    }
+}
+@media (max-width: 426px) {
+    $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
+    @each $producto, $url in $tipoProducto {
+        .#{$producto} {
+            background: $url;
+            background-position: center;
+            background-size: 400px;
+            
+        }
+    }
+    .contenedor {
+        width: 400px;
+        height: 400px;
+        background-repeat: no-repeat;
+        &::before {
+            bottom: 100%;
+        }
+        &::after {
+            right: 0%;
+            top: 100%;
+        }
+
+    }
+    a:hover .contenedor::before {
+        transform: scale(1) translateY(67%);
+    }
+    a:hover .contenedor::after {
+        transform: scale(1) translateY(-66.4%);
+    }
+    span {
+        position: relative;
+        top: 45%;
+        left: 25%;
+        font-size: 1rem;
+        &:hover {
+            background-color: #fff;
+            color: $colorLogo;
+        }
+    
+    }
+    .producto__descripcion {
+      left: 18%;
+    }
 }
