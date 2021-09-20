@@ -104,7 +104,6 @@ footer {
 body {
   width: 100%;
   margin: auto;
-  background-color: #f6f5dd;
 }
 
 .main {
@@ -121,11 +120,7 @@ body {
 }
 
 /* Seccion Banner */
-.bannerhome {
-  overflow: hidden;
-}
-
-.bannerhome .bannerhome__tarjeta--tit {
+.bannerhome__tarjeta--tit {
   color: white;
   text-align: center;
   background-color: #777a834d;
@@ -135,13 +130,13 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.bannerhome .bannerhome__tarjeta--img {
+.bannerhome__tarjeta--img {
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.bannerhome .bannerhome__tarjeta--img2 {
+.bannerhome__tarjeta--img2 {
   width: 100%;
   border-radius: 10px;
 }
@@ -154,7 +149,7 @@ body {
   margin: 0px;
 }
 
-.nos__contenedor .nos__contenedor--animacion {
+.nos__contenedor--animacion {
   background-color: #43bda0;
   -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
           clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
@@ -173,7 +168,7 @@ body {
           animation: vibracion .5s infinite;
 }
 
-.nos__contenedor .nos__contenedor--animacion a {
+.nos__contenedor--animacion a {
   text-decoration: none;
   color: white;
   font-size: 25px;
@@ -182,17 +177,17 @@ body {
   border-radius: 10px;
 }
 
-.nos__contenedor .nos__contenedor--animacion a:hover {
+.nos__contenedor--animacion a:hover {
   background-color: white;
   color: #43bda0;
 }
 
-.nos__contenedor .nos__contenedor--animacion:hover {
+.nos__contenedor--animacion:hover {
   -webkit-animation: animadiv 1s 1 forwards;
           animation: animadiv 1s 1 forwards;
 }
 
-.nos__contenedor .nos__contenedor--modp {
+.nos__contenedor--modp {
   width: 90vw;
   padding: 10px;
   background-color: #f6f5dd;
@@ -202,7 +197,7 @@ body {
   font-size: 2rem;
 }
 
-.nos__contenedor .botonResponsive {
+.botonResponsive {
   color: #43bda0;
   font-size: 20px;
   border: 2px solid #43bda0;
@@ -214,7 +209,7 @@ body {
   margin: auto;
 }
 
-.nos__contenedor .botonResponsive:hover {
+.botonResponsive:hover {
   background-color: white;
   color: #43bda0;
 }
@@ -359,7 +354,7 @@ span:hover {
           box-shadow: -4px 4px 11px 0px pink;
 }
 
-.producto__titulo .producto__titulo--modtit {
+.producto__titulo--modtit {
   font-size: 25px;
 }
 
@@ -368,7 +363,6 @@ span:hover {
   left: 30%;
   bottom: 15%;
   z-index: 2;
-  /* clip-path: polygon(0% 0%, 55% 25%, 100% 50%, 53% 78%, 0% 100%); */
 }
 
 .producto__descripcion {
@@ -400,6 +394,91 @@ span:hover {
   height: 30px;
   border-radius: 10px;
   background-color: #f6f5dd;
+}
+
+/* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
+.fondonavA4 {
+  background-color: #43bda0;
+  top: 0px;
+  z-index: 10;
+}
+
+.nav-fondonavA4 {
+  background-color: #43bda0;
+}
+
+.encuadernacionTipo {
+  background-color: #f6f5dd;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+}
+
+.encuadernacionTipo img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+#seccionUno {
+  color: #fff;
+  text-shadow: 1px 1px 2px #43bda0;
+  font-weight: 800;
+}
+
+#seccionDos, #seccionTres {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-weight: 800;
+}
+
+.interiores {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  min-height: 100vh;
+  max-height: 300vh;
+  background-color: #43bda0;
+  z-index: 2;
+  padding: 10px;
+}
+
+section div img {
+  width: 80%;
+}
+
+.galeria {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  min-height: 100vh;
+  background-color: #b2fae2;
+  z-index: 2;
+}
+
+#boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.botonProductos {
+  background-image: -webkit-linear-gradient(#f8b2bd, white);
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 3px;
+  border: none;
+}
+
+.botonProductos:hover {
+  background-image: -webkit-linear-gradient(white, #f8b2bd);
 }
 
 /* -----------------------Animaciones---------------------------------------------------------------------------------- */
@@ -457,6 +536,9 @@ span:hover {
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
 /* Productos */
 @media (max-width: 768px) {
+  .nos__contenedor--modp {
+    font-size: 12px;
+  }
   .cuadernoA4 {
     background: url(../img/paginaProductos/CuadernoA4.jpg);
     background-position: center;

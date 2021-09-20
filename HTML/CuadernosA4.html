@@ -7,7 +7,7 @@
     <meta name="description" content="Con el fin de adaptarnos a las necesidades de nuestros clientes creamos estos cuadernos A4, para quienes necesiten mas espacio">
     <meta name="keywords" content="Agenda, Universitarios, Docentes, Emprendedor, Organizador, Semanal, A4"> 
     <title>Cuadernos A4 | Ta Luego</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
@@ -24,9 +24,9 @@
         </a>
     </div>    
   </header>
-  <nav class="fondonav">
-    <div class="navbar  navbar-expand-md navbar-dark nav-fondonav ">
-        <div class="container-fluid nav-fondonav" >
+  <nav class="fondonavA4">
+    <div class="navbar  navbar-expand-md navbar-dark nav-fondonavA4 ">
+        <div class="container-fluid nav-fondonavA4" >
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,26 +53,57 @@
         </div>
     </div>
   </nav>
-    <main>
-        <h2>CUADERNOS A4</h2>
+    <main class="main">
+        <h1 class="main__titulo--modtit">CUADERNOS A4</h1>
         <!-- Tipos de encuadernaciones -->
-        <section class="encuadernacionTipo"> 
-            <h3 class="titulosPageA4">Tipos de Encuadernación</h3>
-            <img src="../img/circuloAnillado.jpg" alt="Imagen encuadernacion Anillado">
-            <h4>Anillado doble Ring</h4>
+        <section class="encuadernacionTipo d-grid"> 
+            <div class="row m-auto">
+                <h2 class="titulosPageA4" id="seccionUno">Tipos de Encuadernación</h2>
+            </div>
+            <div class="row">
+                <img src="../img/circuloAnillado.jpg" alt="Imagen encuadernacion Anillado" class="m-auto">
+            </div>
+            <h3 class=" row m-auto">Anillado doble Ring</h3>
+           
             <!-- Descripción del tipo de encuadernacion -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus unde enim error. Ex minus minima a dicta voluptates autem nemo repellat maiores quasi exercitationem numquam commodi, odio impedit quae.</p>
+            <p class="row text-center w-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus unde enim error. Ex minus minima a dicta voluptates autem nemo repellat maiores quasi exercitationem numquam commodi, odio impedit quae.</p>
            
         </section>
         <!-- Interiores de cuadernos -->
         
-        <h3 class="titulosPageA4" id="tituloInteriores">Interiores</h3>
-        <section class="interiores">
-            <img src="../img/DOCENTE.jpg" alt="Agenda Docente" id="agendaDocente">
-            <img src="../img/agendaEmprender.jpg" alt="Empreder" id="emprender">
-            <img src="../img/agenda2021.jpg" alt="Agenda" id="agenda">
-            <!-- <img src="#" alt="Rayado">
-            <img src="#" alt="Liso"> -->
+        <section class="interiores d-grid justify-content-around">
+            <div class="row m-4">
+                <h2 class="titulosPageA4" id="seccionDos">Interiores</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-4">
+                    <img src="../img/DOCENTE.jpg" alt="Agenda Docente" id="agendaDocente">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="../img/agendaEmprender.jpg" alt="Empreder" id="emprender">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="../img/agenda2021.jpg" alt="Agenda" id="agenda">
+                </div>
+            </div>
+        </section>
+        <!-- Galeria de imagenes -->    
+        <section class="galeria d-grid">
+            <div class="row m-4">
+                <h2 class="titulosPageA4" id="seccionTres">Galeria de imágenes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-artem-beliaikin-994524.jpg" alt="Agenda Docente" id="agendaDocente">
+                </div>
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-deeana-creates-1646981.jpg" alt="Empreder" id="emprender">
+                </div>
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-thirdman-7256847.jpg" alt="Agenda" id="agenda">
+                </div>
+            </div>
+            
         </section>
         
         <div id="boton">    
@@ -81,20 +112,33 @@
             </button>
         </div>  
     </main>
-    <footer>
-        <div id="contacto">
-            <button class="redesContacto"><i class="fab fa-instagram"></i></button>  
-            <button class="redesContacto"><a href="./Contacto.html"><i class="fas fa-envelope"></i></a></button> 
-            <button class="redesContacto"><i class="fab fa-whatsapp"></i></button>  
+    <footer class="container-fluid footer"> 
+        <div class="footer__contacto">
+            <button class="footer__contacto--modlogo1"> <i class="fab fa-instagram"></i></button>  
+            <button class="footer__contacto--modlogo2"><a href="./HTML/Contacto.html"><i class="fas fa-envelope"></i></a></button>  
+            <button class="footer__contacto--modlogo3"><i class="fab fa-whatsapp"></i></button>  
         </div>
-    &copy; Ta luego cuadernos 2021
-        <div id="emprendmientosAmigos">
-            <h5>Emprendimientos amigos</h5>
-            <li>emprendimiento1</li>
-            <li>emprendimiento2</li>
-            <li>emprendimiento3</li>
-            <li>emprendimiento4</li>
-            <li>emprendimiento5</li>
+        &copy; Ta luego cuadernos 2021
+        <div class="emprendimientos">
+            <h5 class="emprendimientos__titulo">Emprendimientos amigos</h5>
+            <ul class="emprendimientos__listado">
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento1</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento2</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento3</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento4</li>
+                </a>
+                <a href="#">
+                    <li class="emprenimientos__listado--item">emprendimiento5</li>
+                </a>
+                
+            </ul>
         </div>
 
 

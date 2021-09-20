@@ -16,7 +16,7 @@ a:link, a:visited, a:active {
 body {
     width: 100%;
     margin: auto;
-    background-color: $bgBody;    
+     
 }
 @mixin titulos ($bgColor:$bgTitulos){
     text-align: center;
@@ -37,28 +37,30 @@ body {
        @include titulos;
     }
 }
+
+
 /* Seccion Banner */
-.bannerhome{
-    overflow: hidden;
-    .bannerhome__tarjeta--tit {
-        color: white;
-        text-align: center;
-        background-color: $bgSectionColor;
-        width: 100%;
-        height: 40px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        }
-    .bannerhome__tarjeta--img {
-        width: 100%;
-        border-top-left-radius:10px ;
-        border-top-right-radius:10px ;
-        }
-    .bannerhome__tarjeta--img2 {
-        width: 100%;
-        border-radius: 10px;
-    }
+
+    
+.bannerhome__tarjeta--tit {
+    color: white;
+    text-align: center;
+    background-color: $bgSectionColor;
+    width: 100%;
+    height: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+.bannerhome__tarjeta--img {
+    width: 100%;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+.bannerhome__tarjeta--img2 {
+    width: 100%;
+    border-radius: 10px;
+}
+
     
     
         
@@ -68,66 +70,60 @@ body {
     @include titulos;
     margin: 0px;
 }
-.nos__contenedor {
-    
-   
-    .nos__contenedor--animacion {
-        background-color: $colorLogo;
-        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-        width: 400px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: vibracion .5s infinite;
-    
-        a{
-            text-decoration: none;
-            color: white;
-            font-size: 25px;
-            border: 2px solid white;
-            font-weight: 800;
-            border-radius: 10px;
-        }
-        a:hover {
-            background-color: white;
-            color: $colorLogo;
-        }
-        
+.nos__contenedor--animacion {
+    background-color: $colorLogo;
+    clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: vibracion .5s infinite;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        border: 2px solid white;
+        font-weight: 800;
+        border-radius: 10px;
     }
-    .nos__contenedor--animacion:hover {
+    a:hover {
+        background-color: white;
+        color: $colorLogo;
+    }
+    &:hover {
 
         animation: animadiv 1s 1 forwards;
     }
-       
-    .nos__contenedor--modp {
-        width: 90vw;
-        padding: 10px;
-        background-color: $bgBody;
-        text-align: justify;
-        color: $colorLogo;
-        font-weight: 700;
-        font-size: 2rem;
-    }
-    .botonResponsive{
-        color: $colorLogo;
-        font-size: 20px;
-        border: 2px solid $colorLogo;
-        font-weight: 800;
-        border-radius: 10px;
-        background-color: $bgBody;
-        text-align: center;
-        width: 40%;
-        margin: auto;
         
-    }
-    
-    .botonResponsive:hover {
-        background-color: white;
-        color: $colorLogo;
-        
-    }
 }
+       
+.nos__contenedor--modp {
+    width: 90vw;
+    padding: 10px;
+    background-color: $bgBody;
+    text-align: justify;
+    color: $colorLogo;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.botonResponsive{
+    color: $colorLogo;
+    font-size: 20px;
+    border: 2px solid $colorLogo;
+    font-weight: 800;
+    border-radius: 10px;
+    background-color: $bgBody;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+    
+.botonResponsive:hover {
+    background-color: white;
+    color: $colorLogo;
+}
+
 /* Seccion Redes */    
 .redesig__titulo {
     display: flex;
@@ -228,45 +224,41 @@ span {
 
 }
 
-    .producto__titulo {
-       @include titulos (pink);
-       width: 230px;
-       position: absolute;
-       left: 25%;
-       top: 12%;
-       z-index: 4;
-       border-radius: 5px;
-       box-shadow: -4px 4px 11px 0px pink;
+.producto__titulo {
+    @include titulos (pink);
+    width: 230px;
+    position: absolute;
+    left: 25%;
+    top: 12%;
+    z-index: 4;
+    border-radius: 5px;
+    box-shadow: -4px 4px 11px 0px pink;
+}
        
-        .producto__titulo--modtit {
-            font-size: 25px;
-          }
-    }
-    .producto__imagen {
-        position:absolute;
-        left: 30%;
-        bottom: 15%;
-        z-index: 2;
-        /* clip-path: polygon(0% 0%, 55% 25%, 100% 50%, 53% 78%, 0% 100%); */
-        
-    }
+.producto__titulo--modtit {
+    font-size: 25px;
+}
+.producto__imagen {
+    position:absolute;
+    left: 30%;
+    bottom: 15%;
+    z-index: 2;
+}
     
     
-    .producto__descripcion {
-        background-color: $colorLogo;
-        width: 300px;
-        position:absolute;
-        color: white;
-        font-weight: 800;
-        font-size: 25;
-        right: 20%;
-        top: 70%;
-        border-radius: 5px;
-        box-shadow: -4px 4px 11px 0px $bgTitulos;
-        z-index: 3;
-        
-        
-    }
+.producto__descripcion {
+    background-color: $colorLogo;
+    width: 300px;
+    position:absolute;
+    color: white;
+    font-weight: 800;
+    font-size: 25;
+    right: 20%;
+    top: 70%;
+    border-radius: 5px;
+    box-shadow: -4px 4px 11px 0px $bgTitulos;
+    z-index: 3;
+}
 .contactanos {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%2343bda0' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
     .inputs {
@@ -281,7 +273,81 @@ span {
 
     }
 }
+/* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
+
+.fondonavA4 {
+    background-color:  $colorLogo;
+    top: 0px; 
+    z-index:10; 
+}
+.nav-fondonavA4 {
+    background-color:  $colorLogo;
+}
+.encuadernacionTipo {
+    background-color: $bgBody;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    img {
+        border-radius: 50%;
+        width: 200px;
+    }
+}
+#seccionUno {
+    color: #fff;
+    text-shadow: 1px 1px 2px #43bda0;
+    font-weight: 800;
     
+}
+#seccionDos, #seccionTres {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: 800;
+    
+}
+
+
+.interiores {
+    position: sticky;
+    top: 0px;
+    min-height: 100vh;
+    max-height: 300vh;
+    background-color: $bgTitulos;
+    z-index: 2;
+    padding: 10px;
+   
+}    
+section div img {
+    width: 80%;
+}
+
+.galeria {
+    position: sticky;
+    top: 0px;
+    min-height: 100vh;
+    background-color: #b2fae2;
+    z-index: 2;
+}    
+#boton {
+    display: flex;
+    justify-content: center;
+}
+.botonProductos {
+    background-image: -webkit-linear-gradient(#f8b2bd, white);
+    border-radius: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 3px;
+    border: none;
+}
+
+.botonProductos:hover {
+    background-image: -webkit-linear-gradient(white, #f8b2bd);
+
+}
 
 /* -----------------------Animaciones---------------------------------------------------------------------------------- */
 @keyframes animadiv {
@@ -313,6 +379,9 @@ span {
 
 @media (max-width: 768px) {
     
+    .nos__contenedor--modp {
+        font-size: 12px;
+    }
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
@@ -364,7 +433,6 @@ span {
             background: $url;
             background-position: center;
             background-size: 300px;
-            
         }
     }
     .contenedor {
