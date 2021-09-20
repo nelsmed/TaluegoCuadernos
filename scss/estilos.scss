@@ -299,6 +299,7 @@ span {
 
 
 @media (max-width: 768px) {
+    
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
@@ -349,13 +350,13 @@ span {
         .#{$producto} {
             background: $url;
             background-position: center;
-            background-size: 400px;
+            background-size: 300px;
             
         }
     }
     .contenedor {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         background-repeat: no-repeat;
         &::before {
             bottom: 100%;
@@ -367,10 +368,10 @@ span {
 
     }
     a:hover .contenedor::before {
-        transform: scale(1) translateY(67%);
+        transform: scale(1) translateY(50%);
     }
     a:hover .contenedor::after {
-        transform: scale(1) translateY(-66.4%);
+        transform: scale(1) translateY(-50%);
     }
     span {
         position: relative;
@@ -384,6 +385,9 @@ span {
     
     }
     .producto__descripcion {
-      left: 18%;
+      width: 250px;
+      left: 20%;
+      top: 60%;
+      font-size: 15px;
     }
 }

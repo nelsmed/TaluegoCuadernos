@@ -45,9 +45,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 20px;
 }
 
@@ -75,6 +74,30 @@ footer {
 .emprenimientos__listado--item {
   font-size: 13px;
   color: #43bda0;
+}
+
+@media (min-width: 424px) {
+  .footer__contacto--modlogo1 {
+    font-size: 20px;
+    border: none;
+    background-color: #f6f5dd;
+    color: #43bda0;
+  }
+  .footer__contacto--modlogo2 {
+    font-size: 20px;
+    border: none;
+    background-color: #f6f5dd;
+    color: #43bda0;
+  }
+  .footer__contacto--modlogo3 {
+    font-size: 20px;
+    border: none;
+    background-color: #f6f5dd;
+    color: #43bda0;
+  }
+  .emprendimientos__titulo {
+    font-size: 15px;
+  }
 }
 
 /*------------------------------------------------------- Estilos de Index----------------------------------------------- */
@@ -473,21 +496,21 @@ span:hover {
   .cuadernoA4 {
     background: url(../img/paginaProductos/CuadernoA4.jpg);
     background-position: center;
-    background-size: 400px;
+    background-size: 300px;
   }
   .cuadernoA5 {
     background: url(../img/paginaProductos/CuadernoA5.jpg);
     background-position: center;
-    background-size: 400px;
+    background-size: 300px;
   }
   .pizarra {
     background: url(../img/paginaProductos/libreria.jpg);
     background-position: center;
-    background-size: 400px;
+    background-size: 300px;
   }
   .contenedor {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background-repeat: no-repeat;
   }
   .contenedor::before {
@@ -498,12 +521,12 @@ span:hover {
     top: 100%;
   }
   a:hover .contenedor::before {
-    -webkit-transform: scale(1) translateY(67%);
-            transform: scale(1) translateY(67%);
+    -webkit-transform: scale(1) translateY(50%);
+            transform: scale(1) translateY(50%);
   }
   a:hover .contenedor::after {
-    -webkit-transform: scale(1) translateY(-66.4%);
-            transform: scale(1) translateY(-66.4%);
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
   }
   span {
     position: relative;
@@ -516,7 +539,10 @@ span:hover {
     color: #43bda0;
   }
   .producto__descripcion {
-    left: 18%;
+    width: 250px;
+    left: 20%;
+    top: 60%;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

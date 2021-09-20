@@ -2,7 +2,7 @@ footer {
     border-top: 3px solid $colorLogo;
     background-color: $bgBody;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 }
 
@@ -22,3 +22,21 @@ footer {
         font-size: 13px;
         color: $colorLogo;
     }
+
+@media (min-width:424px) {
+    @mixin logosRedes {
+        font-size: 20px;
+        border: none;
+        background-color: $bgBody;
+        color: $colorLogo;
+    }
+    @for $i from 0 to 3 {
+        .footer__contacto--modlogo#{$i + 1} {
+            @include logosRedes;
+        }
+    }
+   .emprendimientos__titulo {
+       font-size: 15px;
+   }
+
+}
