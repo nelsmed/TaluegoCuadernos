@@ -7,7 +7,7 @@
         <meta name="description" content="Desde agendas para doncentes hasta cuadernos pediatricos, todo lo producido esta pensado para resolver tus necesidades">
         <meta name="keywords" content="Docente, Pediatrico, Viajes, Agenda, Recetarios, Diseño, Interior, Personalizado, A5"> 
         <title>Cuadernos A5 | Ta Luego</title>
-        <link rel="stylesheet" href="../CSS/styles.css">
+        <link rel="stylesheet" href="../CSS/estilos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
@@ -22,9 +22,9 @@
             </a>
         </div>    
     </header>
-    <nav class="fondonav">
-        <div class="navbar  navbar-expand-md navbar-dark nav-fondonav ">
-            <div class="container-fluid nav-fondonav" >
+    <nav class="fondonavA4">
+        <div class="navbar  navbar-expand-md navbar-dark nav-fondonavA4 ">
+            <div class="container-fluid nav-fondonavA4" >
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -50,41 +50,75 @@
                 </div>
             </div>
         </div>
-    </nav>
-        <main>
-            <h1>CUADERNOS A5</h1>
+      </nav>
+        <main class="main">
+            <h1 class="main__titulo--modtit">CUADERNOS A5</h1>
             <!-- Tipos de encuadernaciones -->
-            <section class="gridA5">
-                <section class="encuadernacionTipo">
-                    <h3 class="titulosPageA4">Encuadernación Belga</h3>
-                    <img src="../img/circuloCosido.jpg" alt="Imagen encuadernacion Belga">
-                    <h4>Encuadernación Belga</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus unde enim error. Ex minus minima a dicta voluptates autem nemo repellat maiores quasi exercitationem numquam commodi, odio impedit quae.</p>
-                </section>
-                <section class="encuadernacionTipo">
-                    <h3 class="titulosPageA4">Anillado Doble Ring</h3>
-                    <img src="../img/circuloAnillado.jpg" alt="Imagen Encuadernacion Anillado">
-                    <h4>Anillado Doble Ring</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, nisi. Rem praesentium alias eveniet possimus </p>
-                </section>    
-            </section>
-            <a href="#Interiores">
+            
+                <h2 class="titulosPageA5">Tipos de Encuadernación</h2>
+            
+            <section id="seccionUno" class="encuadernacionTipo d-flex">
                 
-            </a>
-            <!-- Interiores de cuadernos -->
-            <h2 class="titulosPageA4" id="tituloInteriores">Interiores</h2>
-            <section class="interioresA5">
-                <img src="../img/agenda2021.jpg" alt="Agenda" id="agendaA5">
-                <img src="../img/Interiores/pediatrico.jpg" alt="Pediatrico" id="pediatricoA5">
-                <img src="../img/Interiores/recetario.jpg" alt="Recetario" id="recetarioA5">
-                <img src="../img/Interiores/viajes.jpg" alt="Viajes" id="viajesA5">
+                
+                <section class="encuadernacionTipo__belga d-grid"> 
+                    <div class="row">
+                        <img src="../img/circuloCosido.jpg" alt="Imagen encuadernacion Anillado" class="m-auto">
+                    </div>
+                    <h3 class=" row m-auto">Encuadernacion Belga</h3>
+                    <!-- Descripción del tipo de encuadernacion -->
+                    <p class="row text-center w-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus unde enim error. Ex minus minima a dicta voluptates autem nemo repellat maiores quasi exercitationem numquam commodi, odio impedit quae.</p>
+                    
+                </section>
+                <section class="encuadernacionTipo__anillo d-grid"> 
+                    <div class="row">
+                        <img src="../img/circuloAnillado.jpg" alt="Imagen encuadernacion Anillado" class="m-auto">
+                    </div>
+                    <h3 class=" row m-auto">Anillado doble Ring</h3>
+                    <!-- Descripción del tipo de encuadernacion -->
+                    <p class="row text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus unde enim error. Ex minus minima a dicta voluptates autem nemo repellat maiores quasi exercitationem numquam commodi, odio impedit quae.</p>
+                </section>
             </section>
-            <div id="boton">    
-                <button class="botonProductos">
-                <a href="./Productos.html"> Conoce Más Productos </a>
-                </button>
-            </div>  
-        </main>
+          
+            <!-- Interiores de cuadernos -->
+        
+        <section class="interiores d-grid justify-content-around">
+            <div class="row m-4">
+                <h2 class="titulosPageA4" id="seccionDos">Interiores</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3">
+                    <img src="../img/agenda2021.jpg" alt="Agenda" id="agendaA5">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../img/Interiores/pediatrico.jpg" alt="Pediatrico" id="pediatricoA5">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../img/Interiores/recetario.jpg" alt="Recetario" id="recetarioA5">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../img/Interiores/viajes.jpg" alt="Viajes" id="viajesA5">
+                </div>
+            </div>
+        </section>
+         <!-- Galeria de imagenes -->    
+        <section class="galeria d-grid">
+            <div class="row m-4">
+                <h2 class="titulosPageA4" id="seccionTres">Galeria de imágenes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-artem-beliaikin-994524.jpg" alt="Agenda Docente" id="agendaDocente">
+                </div>
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-deeana-creates-1646981.jpg" alt="Empreder" id="emprender">
+                </div>
+                <div class="col-8 col-md-4">
+                    <img src="../img/pexels-thirdman-7256847.jpg" alt="Agenda" id="agenda">
+                </div>
+            </div>
+            
+        </section>
+            
         
         <footer class="container-fluid footer"> 
           <div class="footer__contacto">

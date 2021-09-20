@@ -458,27 +458,32 @@ section div img {
   z-index: 2;
 }
 
-#boton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* -------------------------------------------------Pagina Cuadernos A5--------------------------------------------------- */
+.encuadernacionTipo__anillo {
+  width: 50%;
 }
 
-.botonProductos {
-  background-image: -webkit-linear-gradient(#f8b2bd, white);
-  border-radius: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 3px;
-  border: none;
+.encuadernacionTipo__anillo p {
+  width: 70%;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-.botonProductos:hover {
-  background-image: -webkit-linear-gradient(white, #f8b2bd);
+.encuadernacionTipo__belga {
+  width: 50%;
+}
+
+.encuadernacionTipo__belga p {
+  width: 70%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.titulosPageA5 {
+  color: #fff;
+  text-shadow: 1px 1px 2px #43bda0;
+  font-weight: 800;
+  text-align: center;
 }
 
 /* -----------------------Animaciones---------------------------------------------------------------------------------- */
