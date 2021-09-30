@@ -23,41 +23,28 @@
 </head>
 <body>
    <header class="header"> 
-        <div class="logo d-none d-md-block ">
+        <div class="logo">
             <a href="./Index.html" class="logo__link" >
                <img src="./img/logoSinFondo.png" alt="Ta Luego Cuadernos" class="logo__link--posicion">
             </a>
         </div>    
     </header>
         <!-- Menu de navegacion -->
-    <nav class="fondonav">
-        <div class="navbar  navbar-expand-md navbar-dark nav-fondonav ">
-            <div class="container-fluid nav-fondonav" >
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./Index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./HTML/CuadernosA4.html">Cuadernos A4</a></li>
-                                <li><a class="dropdown-item" href="./HTML/CuadernosA5.html">Cuadernos A5</a></li>
-                                <li><a class="dropdown-item" href="./HTML/Pizarras.html">Pizarras Magneticas</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./HTML/Contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <nav>
+       <ul class="menu">
+           <li class="menu__item"><a href="./index.html">HOME</a></li>
+           <li class="menu__item menu__desplegable">
+               <a href="./HTML/Productos.html">
+                   PRODUCTOS <div class="contenedorArrow"><i class="arrow fas fa-sort-down"></i></div> 
+                </a>
+                <ul class="menu__submenu">
+                    <li class="menu__submenu--item"><a href="./HTML/CuadernosA4.html">CUADERNOS A4</a></li>
+                    <li class="menu__submenu--item"><a href="./HTML/CuadernosA5.html">CUADERNOS A5</a></li>
+                    <li class="menu__submenu--item"><a href="./HTML/Pizarras.html">PIAZARRAS</a></li>
+                </ul>
+            </li>
+           <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
+       </ul>
     </nav>
       
     <main class="main">
@@ -117,7 +104,7 @@
                         <img class="bannerhome__tarjeta--img" src="./img/fotosParaHome/segundoCurado/homeDos.jpg" alt="Imagen de productos">
                         <h3 class="bannerhome__tarjeta--tit">Diseños Propios</h3>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-sm-12" data-aos="fade-left" data-aos-offset="300" data-aos-duration='1500' >
+                    <div class="col-md-6 col-lg-3 col-sm-12" data-aos="" data-aos-offset="300" data-aos-duration='1500' >
                         <img class="bannerhome__tarjeta--img" src="./img/fotosParaHome/segundoCurado/homeCinco.jpg" alt="Imagen de productos">
                         <h3 class="bannerhome__tarjeta--tit">Funcionalidad</h3>
                     </div>
@@ -159,7 +146,7 @@
                         <img class="bannerhome__tarjeta--img" src="./img/fotosParaHome/segundoCurado/homeTres.jpg" alt="Imagen de productos">
                         <h3 class="bannerhome__tarjeta--tit">Diseños Propios</h3>
                     </div>
-                    <div class="col-md-6 col-lg-3 col-sm-12" data-aos="fade-left" data-aos-offset="300" data-aos-duration='1500' >
+                    <div class="col-md-6 col-lg-3 col-sm-12" data-aos="" data-aos-offset="300" data-aos-duration='1500' >
                         <img class="bannerhome__tarjeta--img" src="./img/fotosParaHome/segundoCurado/homeCinco.jpg" alt="Imagen de productos">
                         <h3 class="bannerhome__tarjeta--tit">Funcionalidad</h3>
                     </div>
@@ -171,11 +158,11 @@
                 <h2 class="nos__titulo--modtit"> Sobre Nosotros </h2>
                 <div class="nos__contenedor d-block d-lg-flex justify-content-center">
                     <div class="nos__contenedor--animacion d-none d-lg-flex">
-                        <a href="./HTML/Productos.html">
-                                Productos
+                        <a class="nos__contenedor--link" href="./HTML/Productos.html">
+                            Productos
                         </a>
                     </div>
-                    <p class="nos__contenedor--modp m-auto" data-aos="fade-left" data-aos-duration='1500'> 
+                    <p class="nos__contenedor--modp m-auto" data-aos="" data-aos-duration='1500'> 
                         Ta Luego cuadernos en un emprendimiento que se dedica
                         a la confeccion de cuadernos artesanales cocidos y 
                         anillados. Nuestro fuerte es la perzonalizacion de tapas 

@@ -4,21 +4,98 @@ header {
 }
 .logo {
     background-color: $bgBody;
-    padding: 5px;
-    .logo__link {
-        .logo__link--posicion {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        } 
-    }
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px ;
 }
-.fondonav {
-    background-color:  $colorLogo;
+nav {
+    background-color: $colorLogo;
     position: sticky;
-    top: 0px; 
-    z-index:10; 
-}
-.nav-fondonav {
-    background-color:  $colorLogo;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    .menu {
+        display: flex;
+        padding: 0px;
+        align-items: center;
+        margin-bottom: 0;
+        a {
+            font-size: 1,5rem;
+            color: white;
+            font-weight: 700;
+        }
+        .menu__item {
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            box-shadow: white;
+            width: 30%;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                background-color: white;
+                height: 4px;
+                width: 0%;
+                position: absolute;
+                top: 1.5rem;
+                transition: width 0.3s ease-in;
+            }
+            &:hover:before {
+                width: 100%;
+            }
+        
+        }
+        .menu__desplegable {
+            position: relative;
+            display: inline;
+            a {
+                display: flex;
+                
+            }
+
+            .contenedorArrow {
+                width: 16px;
+                height: 16px;
+                position: relative;
+                top: 3.5px;
+                left: 3px;
+                transform: rotate(-90deg);
+                transition: all 0.5s ease-in;
+                .arrow {
+                    display: inline;
+                }
+            }
+            
+            /* Acaaa quedeeeeeeee 30/09 */
+            &:hover .contenedorArrow {
+                transform: rotate(0deg);
+                
+            }
+            .menu__submenu {
+                width: 140%;
+                position: absolute;
+                background-color: $colorLogo;
+                padding: 0;
+                display: none;
+                padding: 4px;
+                top: 27px;
+                .menu__submenu--item {
+                    margin-top: 1rem;
+                    text-align: start;
+                }
+            }
+        }
+        .menu__desplegable:hover .menu__submenu{
+            display: block;
+        }
+        
+           
+            
+       
+    }
 }

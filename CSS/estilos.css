@@ -18,25 +18,127 @@ header {
 
 .logo {
   background-color: #f6f5dd;
-  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 0px;
 }
 
-.logo .logo__link .logo__link--posicion {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fondonav {
+nav {
   background-color: #43bda0;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   z-index: 10;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
 }
 
-.nav-fondonav {
+nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+nav .menu a {
+  font-size: 1,5rem;
+  color: white;
+  font-weight: 700;
+}
+
+nav .menu .menu__item {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  -webkit-box-shadow: white;
+          box-shadow: white;
+  width: 30%;
+  position: relative;
+}
+
+nav .menu .menu__item::before {
+  content: '';
+  display: block;
+  background-color: white;
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  top: 1.5rem;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+
+nav .menu .menu__item:hover:before {
+  width: 100%;
+}
+
+nav .menu .menu__desplegable {
+  position: relative;
+  display: inline;
+  /* Acaaa quedeeeeeeee 30/09 */
+}
+
+nav .menu .menu__desplegable a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .menu .menu__desplegable .contenedorArrow {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3.5px;
+  left: 3px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+nav .menu .menu__desplegable .contenedorArrow .arrow {
+  display: inline;
+}
+
+nav .menu .menu__desplegable:hover .contenedorArrow {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+nav .menu .menu__desplegable .menu__submenu {
+  width: 140%;
+  position: absolute;
   background-color: #43bda0;
+  padding: 0;
+  display: none;
+  padding: 4px;
+  top: 27px;
+}
+
+nav .menu .menu__desplegable .menu__submenu .menu__submenu--item {
+  margin-top: 1rem;
+  text-align: start;
+}
+
+nav .menu .menu__desplegable:hover .menu__submenu {
+  display: block;
 }
 
 footer {
@@ -164,27 +266,34 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: vibracion .5s infinite;
-          animation: vibracion .5s infinite;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
-.nos__contenedor--animacion a {
+.nos__contenedor--animacion .nos__contenedor--link {
   text-decoration: none;
   color: white;
   font-size: 25px;
   border: 2px solid white;
   font-weight: 800;
   border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s linear;
+  transition: opacity 0.6s linear;
 }
 
-.nos__contenedor--animacion a:hover {
+.nos__contenedor--animacion .nos__contenedor--link:hover {
   background-color: white;
   color: #43bda0;
 }
 
-.nos__contenedor--animacion:hover {
-  -webkit-animation: animadiv 1s 1 forwards;
-          animation: animadiv 1s 1 forwards;
+.nos__contenedor:hover .nos__contenedor--animacion {
+  -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
+          clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
+}
+
+.nos__contenedor:hover .nos__contenedor--link {
+  opacity: 1;
 }
 
 .nos__contenedor--modp {
@@ -484,58 +593,6 @@ section div img {
   text-shadow: 1px 1px 2px #43bda0;
   font-weight: 800;
   text-align: center;
-}
-
-/* -----------------------Animaciones---------------------------------------------------------------------------------- */
-@-webkit-keyframes animadiv {
-  0% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
-  }
-}
-@keyframes animadiv {
-  0% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
-  }
-}
-
-@-webkit-keyframes vibracion {
-  0% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
-  50% {
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);
-            clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);
-  }
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
-}
-
-@keyframes vibracion {
-  0% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
-  50% {
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);
-            clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);
-  }
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-            clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-  }
 }
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */

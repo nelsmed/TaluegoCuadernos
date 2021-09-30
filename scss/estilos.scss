@@ -10,13 +10,13 @@
 a:link, a:visited, a:active {
     text-decoration:none;
 }
+
 @import "header";
 @import "footer";
 /*------------------------------------------------------- Estilos de Index----------------------------------------------- */
 body {
     width: 100%;
     margin: auto;
-     
 }
 @mixin titulos ($bgColor:$bgTitulos){
     text-align: center;
@@ -78,24 +78,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: vibracion .5s infinite;
-    a{
+    transition: all 1s ease-in;
+    .nos__contenedor--link{
         text-decoration: none;
         color: white;
         font-size: 25px;
         border: 2px solid white;
         font-weight: 800;
         border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.6s linear;
     }
-    a:hover {
+    .nos__contenedor--link:hover {
         background-color: white;
         color: $colorLogo;
     }
-    &:hover {
+    
+    
+}
+.nos__contenedor:hover .nos__contenedor--animacion{
 
-        animation: animadiv 1s 1 forwards;
-    }
-        
+    clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
+}
+.nos__contenedor:hover .nos__contenedor--link{
+   opacity: 1;
 }
        
 .nos__contenedor--modp {
@@ -354,28 +360,6 @@ section div img {
     font-weight: 800;
     text-align: center;
 }
-/* -----------------------Animaciones---------------------------------------------------------------------------------- */
-@keyframes animadiv {
-    0% {
-        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-    }
-    
-    100% {
-        clip-path: polygon(50% 0%, 70% 0, 70% 30%, 70% 60%, 65% 100%, 50% 70%, 35% 100%, 30% 60%, 30% 30%, 30% 0);
-    }
-}
-
-@keyframes vibracion {
-    0% {
-        clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);
-    }
-   
-    50% {clip-path: polygon(50% 0%, 100% 0, 100% 0, 70% 0, 50% 19%, 30% 0, 0 0, 0 0, 0 0);}
-
-    100% {clip-path: polygon(50% 0%, 70% 0, 70% 0, 70% 0, 70% 0, 50% 20%, 30% 0, 30% 0, 30% 0, 30% 0);}
-    
-    
-}
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
 
@@ -396,6 +380,7 @@ section div img {
             
         }
     }
+    
     .contenedor {
         width: 400px;
         height: 400px;
