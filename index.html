@@ -31,11 +31,15 @@
     </header>
         <!-- Menu de navegacion -->
     <nav>
-       <ul class="menu">
-           <li class="menu__item"><a href="./index.html">HOME</a></li>
-           <li class="menu__item menu__desplegable">
-               <a href="./HTML/Productos.html">
-                   PRODUCTOS <div class="contenedorArrow"><i class="arrow fas fa-sort-down"></i></div> 
+        <input type="checkbox" class="menu__btn" id="menu__btn">
+        <label class="menu__icon" for="menu__btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li class="menu__item"><a href="./index.html">HOME</a></li>
+            <li class="menu__item menu__desplegable">
+                <a href="./HTML/Productos.html">
+                    PRODUCTOS <div class="contenedorArrow"><i class="arrow fas fa-sort-down"></i></div> 
                 </a>
                 <ul class="menu__submenu">
                     <li class="menu__submenu--item"><a href="./HTML/CuadernosA4.html">CUADERNOS A4</a></li>
@@ -43,8 +47,13 @@
                     <li class="menu__submenu--item"><a href="./HTML/Pizarras.html">PIAZARRAS</a></li>
                 </ul>
             </li>
-           <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
-       </ul>
+            <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
+        </ul>
+        <div class="logoNav">
+            <a href="./Index.html" class="logoNav__link" >
+                <img src="./img/logoSinFondo.png" alt="Ta Luego Cuadernos" class="logoNav__link--posicion">
+            </a>
+        </div>    
     </nav>
       
     <main class="main">
