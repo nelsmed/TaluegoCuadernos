@@ -27,36 +27,31 @@
             </a>
         </div>    
     </header>
-    <nav class="fondonav">
-        <div class="navbar  navbar-expand-md navbar-dark nav-fondonav ">
-            <div class="container-lg nav-fondonav" >
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./CuadernosA4.html">Cuadernos A4</a></li>
-                                <li><a class="dropdown-item" href="./CuadernosA5.html">Cuadernos A5</a></li>
-                                <li><a class="dropdown-item" href="./Pizarras.html">Pizarras Magneticas</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <nav>
+        <input type="checkbox" class="menu__btn" id="menu__btn">
+        <label class="menu__icon" for="menu__btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li class="menu__item"><a href="../index.html">HOME</a></li>
+            <li class="menu__item menu__desplegable">
+                <a href="./Productos.html">
+                    PRODUCTOS <div class="contenedorArrow"><i class="arrow fas fa-sort-down"></i></div> 
+                </a>
+                <ul class="menu__submenu">
+                    <li class="menu__submenu--item"><a href="./CuadernosA4.html">CUADERNOS A4</a></li>
+                    <li class="menu__submenu--item"><a href="./CuadernosA5.html">CUADERNOS A5</a></li>
+                    <li class="menu__submenu--item"><a href="./Pizarras.html">PIAZARRAS</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
+        </ul>
+        <div class="logoNav">
+            <a href="../Index.html" class="logoNav__link" >
+                <img src="../img/logoSinFondo.png" alt="Ta Luego Cuadernos" class="logoNav__link--posicion">
+            </a>
+        </div>    
     </nav>
-
     <main class="main mainProductos">
         <section class="imgPresenteacion">
             <div class="bgimg"></div>
@@ -134,9 +129,6 @@
                 
             </ul>
         </div>
-        
-
-
     </footer>
     <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

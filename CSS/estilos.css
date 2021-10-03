@@ -27,6 +27,10 @@ header {
   padding: 5px 0px;
 }
 
+.menu__icon, .logoNav {
+  display: none;
+}
+
 nav {
   background-color: #43bda0;
   position: -webkit-sticky;
@@ -46,7 +50,7 @@ nav {
   height: 3rem;
 }
 
-nav .menu__btn, nav .logoNav, nav .menu__icon {
+nav .menu__btn {
   display: none;
 }
 
@@ -159,12 +163,41 @@ nav .menu .menu__desplegable:hover .menu__submenu {
   display: block;
 }
 
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  body {
+    font-size: 14px;
+  }
+  .menu__btn, .logoNav, .menu__icon {
+    display: block;
+  }
+  .logo, .menu__icon {
+    display: none;
+    position: absolute;
+  }
+  .arrow {
+    opacity: 0;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav .logoNav img {
+    width: 3rem;
+  }
+}
+
 @media screen and (max-width: 426px) {
   body {
     font-size: 10px;
   }
   .logo {
     display: none;
+  }
+  .menu__icon, .logoNav {
+    display: block;
   }
   nav {
     display: -webkit-box;
@@ -179,6 +212,9 @@ nav .menu .menu__desplegable:hover .menu__submenu {
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   nav .menu {
     display: block;
@@ -205,29 +241,6 @@ nav .menu .menu__desplegable:hover .menu__submenu {
   }
   nav .menu__btn:checked ~ .menu {
     max-height: 600px;
-  }
-  nav .logoNav img {
-    width: 3rem;
-  }
-}
-
-@media screen and (min-width: 426px) and (max-width: 769px) {
-  body {
-    font-size: 14px;
-  }
-  .logo, .menu__icon {
-    display: none;
-  }
-  .arrow {
-    opacity: 0;
-  }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   nav .logoNav img {
     width: 3rem;
@@ -599,22 +612,12 @@ span:hover {
 }
 
 /* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
-.fondonavA4 {
-  background-color: #43bda0;
-  top: 0px;
-  z-index: 10;
-}
-
-.nav-fondonavA4 {
-  background-color: #43bda0;
-}
-
 .encuadernacionTipo {
   background-color: #f6f5dd;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .encuadernacionTipo img {
@@ -640,8 +643,7 @@ span:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  min-height: 100vh;
-  max-height: 300vh;
+  min-height: 90vh;
   background-color: #43bda0;
   z-index: 2;
   padding: 10px;
@@ -655,7 +657,7 @@ section div img {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: #b2fae2;
   z-index: 2;
 }

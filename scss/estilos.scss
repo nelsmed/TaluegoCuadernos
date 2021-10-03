@@ -17,7 +17,6 @@ a:link, a:visited, a:active {
 body {
     width: 100%;
     margin: auto;
-    
 }
 @mixin titulos ($bgColor:$bgTitulos){
     text-align: center;
@@ -282,19 +281,11 @@ span {
 }
 /* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
 
-.fondonavA4 {
-    background-color:  $colorLogo;
-    top: 0px; 
-    z-index:10; 
-}
-.nav-fondonavA4 {
-    background-color:  $colorLogo;
-}
 .encuadernacionTipo {
     background-color: $bgBody;
     position: sticky;
     top: 0;
-    min-height: 100vh;
+    min-height: 90vh;
     img {
         border-radius: 50%;
         width: 200px;
@@ -319,8 +310,7 @@ span {
 .interiores {
     position: sticky;
     top: 0px;
-    min-height: 100vh;
-    max-height: 300vh;
+    min-height: 90vh;
     background-color: $bgTitulos;
     z-index: 2;
     padding: 10px;
@@ -333,7 +323,7 @@ section div img {
 .galeria {
     position: sticky;
     top: 0px;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #b2fae2;
     z-index: 2;
 }    

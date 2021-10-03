@@ -9,6 +9,9 @@ header {
     padding: 5px 0px ;
 }
 
+.menu__icon, .logoNav{
+    display: none;
+}
 nav {
     background-color: $colorLogo;
     position: sticky;
@@ -19,7 +22,7 @@ nav {
     justify-content: center;
     align-items: center;
     height: 3rem;
-    .menu__btn, .logoNav, .menu__icon {
+    .menu__btn {
         display: none;
     }
     .menu {
@@ -110,6 +113,29 @@ nav {
         }
     }
 }
+@media screen and (min-width:426px) and (max-width:769px){
+    body {
+        font-size: 14px;
+    }
+    .menu__btn, .logoNav, .menu__icon {
+        display: block;
+    }
+    .logo, .menu__icon  {
+        display: none;
+        position: absolute;
+    }
+    .arrow {
+        opacity: 0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        .logoNav img{
+            width: 3rem;
+        }
+        
+    }
+}
 @media screen and (max-width:426px){
     body {
         font-size: 10px;
@@ -117,6 +143,10 @@ nav {
     .logo {
         display:none;
     }
+    .menu__icon, .logoNav{
+        display: block;
+    }
+    
     nav{
         display: flex;
         justify-content: space-between;
@@ -125,6 +155,7 @@ nav {
             font-size: 1.5rem;
             color: white;
             cursor: pointer;
+            order: 2;
         }
         .menu {
             display: block;
@@ -137,7 +168,7 @@ nav {
             overflow: hidden;
             transition: max-height 0.3s;
             .menu__desplegable {
-                 
+                
                 .arrow {
                     opacity: 0;
                 }
@@ -149,8 +180,8 @@ nav {
                         margin: 0;
                     }
                 }
-               
             }
+    
         }
         .menu__btn:checked ~ .menu {
             max-height: 600px;
@@ -160,22 +191,4 @@ nav {
         }
     }   
     
-}
-@media screen and (min-width:426px) and (max-width:769px){
-    body {
-        font-size: 14px;
-    }
-    .logo, .menu__icon  {
-        display: none;
-    }
-    .arrow {
-        opacity: 0;
-    }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        .logoNav img {
-            width: 3rem;
-        }
-    }
 }
