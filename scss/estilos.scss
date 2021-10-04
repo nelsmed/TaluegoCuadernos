@@ -27,7 +27,6 @@ body {
 @mixin paramain {
     padding-top: 10px; 
     background-color: $bgBody;
-    margin: auto;
 }
 .main {
     @include paramain;
@@ -152,26 +151,27 @@ body {
 }
 
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
-$tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
+$tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/pizarraProductos.jpeg));
 
 @each $producto, $url in $tipoProducto {
     .#{$producto} {
         background: $url;
         background-position: center;
-        background-size: 600px;
+        background-size: 500px;
+        border-radius: 10px;
         
     }
 }
 .producto {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     margin-bottom: 200px;
 }
 @mixin pseudos {
     content: "";
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: $bgSectionColor;
     position: absolute;
     transition: all 0.5s;
@@ -181,8 +181,8 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
 .contenedor {
     overflow: hidden;
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     background-repeat: no-repeat;
     left: 50%;
     top: 10%;
@@ -201,24 +201,24 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
     
     
     
-a:hover .contenedor::before {
+.contenedor:hover:before {
     transform: scale(1) translateY(100%);
     }
-a:hover .contenedor::after {
+.contenedor:hover:after {
     transform: scale(1) translateY(-100%);
     }
 
-a:hover span {
+a:hover .producto__btn {
     opacity: 1;
 }
-span {
+.producto__btn {
     position: relative;
     top: 45%;
     left: 12%;
     z-index: 6;
     opacity: 0;
     color: $colorTextoTitulos;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border: 2px solid white;
     z-index: 8;
@@ -231,18 +231,18 @@ span {
 }
 
 .producto__titulo {
-    @include titulos (pink);
+    @include titulos (#ec8ea2);
     width: 230px;
     position: absolute;
     left: 25%;
     top: 12%;
     z-index: 4;
     border-radius: 5px;
-    box-shadow: -4px 4px 11px 0px pink;
+    box-shadow: -4px 4px 11px 0px #ec8ea2;
 }
        
 .producto__titulo--modtit {
-    font-size: 25px;
+    font-size: 1rem;
 }
 .producto__imagen {
     position:absolute;
@@ -254,13 +254,13 @@ span {
     
 .producto__descripcion {
     background-color: $colorLogo;
-    width: 300px;
+    width: 400px;
     position:absolute;
     color: white;
     font-weight: 800;
-    font-size: 25;
+    font-size: 1rem;
     right: 20%;
-    top: 70%;
+    top: 60%;
     border-radius: 5px;
     box-shadow: -4px 4px 11px 0px $bgTitulos;
     z-index: 3;
@@ -279,6 +279,8 @@ span {
 
     }
 }
+
+
 /* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
 
 .encuadernacionTipo {
@@ -357,7 +359,7 @@ section div img {
 /* Productos */
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     
     .nos__contenedor--modp {
         font-size: 12px;
@@ -365,8 +367,6 @@ section div img {
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
-            background: $url;
-            background-position: center;
             background-size: 400px;
             
         }
@@ -375,15 +375,23 @@ section div img {
     .contenedor {
         width: 400px;
         height: 400px;
-        background-repeat: no-repeat;
         &::before {
             bottom: 100%;
+            height: 300px;
         }
         &::after {
             right: 0%;
             top: 100%;
+            height: 300px;
         }
 
+    }
+    span {
+        position: relative;
+        top: 45%;
+        left: 25%;
+        font-size: 1rem;
+       
     }
     a:hover .contenedor::before {
         transform: scale(1) translateY(67%);
@@ -391,28 +399,22 @@ section div img {
     a:hover .contenedor::after {
         transform: scale(1) translateY(-66.4%);
     }
-    span {
-        position: relative;
-        top: 45%;
-        left: 25%;
-        font-size: 1rem;
-        &:hover {
-            background-color: #fff;
-            color: $colorLogo
-        }
+   
     
-    }
     .producto__descripcion {
         left: 40%;
-        top: 70%;
+        top: 60%;
+        width: 400px;
+    }
+    .producto__titulo {
+        left: 15%;
+        top: 12%;
     }
 }
 @media (max-width: 426px) {
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
-            background: $url;
-            background-position: center;
             background-size: 300px;
         }
     }
@@ -422,10 +424,12 @@ section div img {
         background-repeat: no-repeat;
         &::before {
             bottom: 100%;
+            height: 300px;
         }
         &::after {
             right: 0%;
             top: 100%;
+            height: 300px;
         }
 
     }
@@ -435,21 +439,44 @@ section div img {
     a:hover .contenedor::after {
         transform: scale(1) translateY(-50%);
     }
-    span {
+    .producto__btn {
         position: relative;
         top: 45%;
         left: 25%;
         font-size: 1rem;
-        &:hover {
-            background-color: #fff;
-            color: $colorLogo;
-        }
-    
+       
     }
     .producto__descripcion {
-      width: 250px;
-      left: 20%;
-      top: 60%;
+      width: 300px;
+      left: 15%;
+      top: 50%;
       font-size: 15px;
     }
+    .producto__titulo {
+        left: 25%;
+        top: 12%;
+    }
+    .producto__btn {
+        top:  45%;
+        left: 15%;
+    }
 }
+@media (max-width: 376px) {
+   
+    .producto__descripcion {
+        width: 300px;
+        left: 10%;
+        top: 50%;
+        font-size: 15px;
+    }
+      .producto__titulo {
+          left: 20%;
+          top: 10%;
+    }
+    .producto__btn {
+        top:  45%;
+        left: 15%;
+    }
+
+}
+        

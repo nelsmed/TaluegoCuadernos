@@ -25,6 +25,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5px 0px;
+  margin: 0;
 }
 
 .menu__icon, .logoNav {
@@ -317,7 +318,6 @@ body {
 .main {
   padding-top: 10px;
   background-color: #f6f5dd;
-  margin: auto;
 }
 
 .main .main__titulo--modtit {
@@ -463,24 +463,27 @@ body {
 .cuadernoA4 {
   background: url(../img/paginaProductos/CuadernoA4.jpg);
   background-position: center;
-  background-size: 600px;
+  background-size: 500px;
+  border-radius: 10px;
 }
 
 .cuadernoA5 {
   background: url(../img/paginaProductos/CuadernoA5.jpg);
   background-position: center;
-  background-size: 600px;
+  background-size: 500px;
+  border-radius: 10px;
 }
 
 .pizarra {
-  background: url(../img/paginaProductos/libreria.jpg);
+  background: url(../img/paginaProductos/pizarraProductos.jpeg);
   background-position: center;
-  background-size: 600px;
+  background-size: 500px;
+  border-radius: 10px;
 }
 
 .producto {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: relative;
   margin-bottom: 200px;
 }
@@ -488,8 +491,8 @@ body {
 .contenedor {
   overflow: hidden;
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   background-repeat: no-repeat;
   left: 50%;
   top: 10%;
@@ -500,7 +503,7 @@ body {
 .contenedor::before {
   content: "";
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-color: #777a834d;
   position: absolute;
   -webkit-transition: all 0.5s;
@@ -512,7 +515,7 @@ body {
 .contenedor::after {
   content: "";
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-color: #777a834d;
   position: absolute;
   -webkit-transition: all 0.5s;
@@ -522,35 +525,35 @@ body {
   top: 100%;
 }
 
-a:hover .contenedor::before {
+.contenedor:hover:before {
   -webkit-transform: scale(1) translateY(100%);
           transform: scale(1) translateY(100%);
 }
 
-a:hover .contenedor::after {
+.contenedor:hover:after {
   -webkit-transform: scale(1) translateY(-100%);
           transform: scale(1) translateY(-100%);
 }
 
-a:hover span {
+a:hover .producto__btn {
   opacity: 1;
 }
 
-span {
+.producto__btn {
   position: relative;
   top: 45%;
   left: 12%;
   z-index: 6;
   opacity: 0;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: 2px solid white;
   z-index: 8;
   border-radius: 10px;
 }
 
-span:hover {
+.producto__btn:hover {
   background-color: #fff;
   color: #43bda0;
 }
@@ -558,19 +561,19 @@ span:hover {
 .producto__titulo {
   text-align: center;
   color: white;
-  background-color: pink;
+  background-color: #ec8ea2;
   width: 230px;
   position: absolute;
   left: 25%;
   top: 12%;
   z-index: 4;
   border-radius: 5px;
-  -webkit-box-shadow: -4px 4px 11px 0px pink;
-          box-shadow: -4px 4px 11px 0px pink;
+  -webkit-box-shadow: -4px 4px 11px 0px #ec8ea2;
+          box-shadow: -4px 4px 11px 0px #ec8ea2;
 }
 
 .producto__titulo--modtit {
-  font-size: 25px;
+  font-size: 1rem;
 }
 
 .producto__imagen {
@@ -582,13 +585,13 @@ span:hover {
 
 .producto__descripcion {
   background-color: #43bda0;
-  width: 300px;
+  width: 400px;
   position: absolute;
   color: white;
   font-weight: 800;
-  font-size: 25;
+  font-size: 1rem;
   right: 20%;
-  top: 70%;
+  top: 60%;
   border-radius: 5px;
   -webkit-box-shadow: -4px 4px 11px 0px #43bda0;
           box-shadow: -4px 4px 11px 0px #43bda0;
@@ -692,36 +695,37 @@ section div img {
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
 /* Productos */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .nos__contenedor--modp {
     font-size: 12px;
   }
   .cuadernoA4 {
-    background: url(../img/paginaProductos/CuadernoA4.jpg);
-    background-position: center;
     background-size: 400px;
   }
   .cuadernoA5 {
-    background: url(../img/paginaProductos/CuadernoA5.jpg);
-    background-position: center;
     background-size: 400px;
   }
   .pizarra {
-    background: url(../img/paginaProductos/libreria.jpg);
-    background-position: center;
     background-size: 400px;
   }
   .contenedor {
     width: 400px;
     height: 400px;
-    background-repeat: no-repeat;
   }
   .contenedor::before {
     bottom: 100%;
+    height: 300px;
   }
   .contenedor::after {
     right: 0%;
     top: 100%;
+    height: 300px;
+  }
+  span {
+    position: relative;
+    top: 45%;
+    left: 25%;
+    font-size: 1rem;
   }
   a:hover .contenedor::before {
     -webkit-transform: scale(1) translateY(67%);
@@ -731,36 +735,25 @@ section div img {
     -webkit-transform: scale(1) translateY(-66.4%);
             transform: scale(1) translateY(-66.4%);
   }
-  span {
-    position: relative;
-    top: 45%;
-    left: 25%;
-    font-size: 1rem;
-  }
-  span:hover {
-    background-color: #fff;
-    color: #43bda0;
-  }
   .producto__descripcion {
     left: 40%;
-    top: 70%;
+    top: 60%;
+    width: 400px;
+  }
+  .producto__titulo {
+    left: 15%;
+    top: 12%;
   }
 }
 
 @media (max-width: 426px) {
   .cuadernoA4 {
-    background: url(../img/paginaProductos/CuadernoA4.jpg);
-    background-position: center;
     background-size: 300px;
   }
   .cuadernoA5 {
-    background: url(../img/paginaProductos/CuadernoA5.jpg);
-    background-position: center;
     background-size: 300px;
   }
   .pizarra {
-    background: url(../img/paginaProductos/libreria.jpg);
-    background-position: center;
     background-size: 300px;
   }
   .contenedor {
@@ -770,10 +763,12 @@ section div img {
   }
   .contenedor::before {
     bottom: 100%;
+    height: 300px;
   }
   .contenedor::after {
     right: 0%;
     top: 100%;
+    height: 300px;
   }
   a:hover .contenedor::before {
     -webkit-transform: scale(1) translateY(50%);
@@ -783,21 +778,42 @@ section div img {
     -webkit-transform: scale(1) translateY(-50%);
             transform: scale(1) translateY(-50%);
   }
-  span {
+  .producto__btn {
     position: relative;
     top: 45%;
     left: 25%;
     font-size: 1rem;
   }
-  span:hover {
-    background-color: #fff;
-    color: #43bda0;
-  }
   .producto__descripcion {
-    width: 250px;
-    left: 20%;
-    top: 60%;
+    width: 300px;
+    left: 15%;
+    top: 50%;
     font-size: 15px;
+  }
+  .producto__titulo {
+    left: 25%;
+    top: 12%;
+  }
+  .producto__btn {
+    top: 45%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 376px) {
+  .producto__descripcion {
+    width: 300px;
+    left: 10%;
+    top: 50%;
+    font-size: 15px;
+  }
+  .producto__titulo {
+    left: 20%;
+    top: 10%;
+  }
+  .producto__btn {
+    top: 45%;
+    left: 15%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
