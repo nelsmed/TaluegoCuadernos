@@ -41,6 +41,9 @@ body {
 /* Seccion Banner */
 
     
+.bannerhome__tarjeta{
+    position: relative ;
+}
 .bannerhome__tarjeta--tit {
     color: white;
     text-align: center;
@@ -283,11 +286,15 @@ a:hover .producto__btn {
 
 /* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
 
+.navCatalogo {
+    position: relative;
+}
+
 .encuadernacionTipo {
     background-color: $bgBody;
     position: sticky;
     top: 0;
-    min-height: 90vh;
+    min-height: 100vh;
     img {
         border-radius: 50%;
         width: 200px;
@@ -308,11 +315,10 @@ a:hover .producto__btn {
     
 }
 
-
 .interiores {
     position: sticky;
     top: 0px;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: $bgTitulos;
     z-index: 2;
     padding: 10px;
@@ -325,9 +331,36 @@ section div img {
 .galeria {
     position: sticky;
     top: 0px;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #b2fae2;
     z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    align-items: center;
+    .galeria__contenedor {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+    .agendaDocente {
+        width: 80%;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        justify-self: center;
+        }
+    .emprender {
+        width: 80%;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        justify-self: center;
+    } 
+    .agenda {
+        width:80%;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }  
+    
 }    
 
 
@@ -460,6 +493,35 @@ section div img {
         top:  45%;
         left: 15%;
     }
+    /* Pagina A4 */
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 20vh 20vh 20vh 10vh;
+        align-items: center;
+        gap: 10px;
+        .galeria__contenedor {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            
+        }
+        .agendaDocente {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+         
+        }
+        .emprender {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+           
+        } 
+        .agenda {
+            grid-row: 4 / 5;
+            grid-column: 1 / 2;
+           
+        }  
+        
+    }    
 }
 @media (max-width: 376px) {
    

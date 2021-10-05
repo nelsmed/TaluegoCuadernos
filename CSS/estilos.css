@@ -328,6 +328,10 @@ body {
 }
 
 /* Seccion Banner */
+.bannerhome__tarjeta {
+  position: relative;
+}
+
 .bannerhome__tarjeta--tit {
   color: white;
   text-align: center;
@@ -615,12 +619,16 @@ a:hover .producto__btn {
 }
 
 /* -------------------------------------------------Pagina Cuadernos A4--------------------------------------------------- */
+.navCatalogo {
+  position: relative;
+}
+
 .encuadernacionTipo {
   background-color: #f6f5dd;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .encuadernacionTipo img {
@@ -646,7 +654,7 @@ a:hover .producto__btn {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #43bda0;
   z-index: 2;
   padding: 10px;
@@ -660,9 +668,63 @@ section div img {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #b2fae2;
   z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 20vh 70vh 10vh;
+      grid-template-rows: 20vh 70vh 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.galeria .galeria__contenedor {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.galeria .agendaDocente {
+  width: 80%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.galeria .emprender {
+  width: 80%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.galeria .agenda {
+  width: 80%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 /* -------------------------------------------------Pagina Cuadernos A5--------------------------------------------------- */
@@ -797,6 +859,51 @@ section div img {
   .producto__btn {
     top: 45%;
     left: 15%;
+  }
+  /* Pagina A4 */
+  .galeria {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 10vh 20vh 20vh 20vh 10vh;
+        grid-template-rows: 10vh 20vh 20vh 20vh 10vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .galeria .galeria__contenedor {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .galeria .agendaDocente {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .galeria .emprender {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .galeria .agenda {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
   }
 }
 
