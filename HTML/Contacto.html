@@ -49,28 +49,21 @@
             </div>    
         </nav>
         <main class="contacto">
-            <h2 class="contacto__titulo">Contacto</h2>
-            <div class="container contacto__formulario">
-                <form name="gform" class="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeKY0_P-nbVARlGZWuFQbNaXaEWktL0DQUauu2hRSIp_cyPBQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-                    <div class="container">
-                        <div class="d-flex flex-column flex-md-row">
-                            <div class="col-5 m-1"><input type="email" name="entry.1440515833" required=true id="entry.1440515833" placeholder="email" /></div>
-                            <div class="col-5 m-1"><input type="text" name="entry.1106854471" required=true id="entry.entry.1106854471" placeholder="Nombre" /></div>
-                        </div>
-                            <div class="col-6 m-1">
-                                <select name="entry.77016113" id="entry.77016113">
-                                    <option>Cuadernos A4</option>
-                                    <option>Cuadernos A5</option>
-                                    <option>Pizarras</option>
-                                    <option selected>Varios</option>
-                                </select>
-                            </div>
-                            <div class="col-12 m-1"><textarea type="text" name="entry.772175219" required=true id="entry.772175219" placeholder="Consulta" class="contacto__consulta"></textarea> </div>
-                            <input type="submit" class="primary contacto__formulario--btn m-1" value="Enviar">
-                        </div>
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-                    </form>
-                </div>
+            <div class="container-fluid contacto__formulario">
+                <h2 class="contacto__titulo">Contacto</h2>
+                <form name="gform" class="gform container-fluid" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeKY0_P-nbVARlGZWuFQbNaXaEWktL0DQUauu2hRSIp_cyPBQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                    <input class="" type="email" name="entry.1440515833" required=true id="entry.1440515833" placeholder="email">
+                    <input class="" type="text" name="entry.1106854471" required=true id="entry.entry.1106854471" placeholder="Nombre">
+                    <select name="entry.77016113" id="entry.77016113">
+                        <option>Cuadernos A4</option>
+                        <option>Cuadernos A5</option>
+                        <option>Pizarras</option>
+                        <option selected>Varios</option>
+                    </select>
+                    <textarea type="text" name="entry.772175219" required=true id="entry.772175219" placeholder="Consulta"></textarea> 
+                    <input type="submit" class="contacto__formulario--btn" value="Enviar">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                </form>
             </div>
         </main>
         <footer>

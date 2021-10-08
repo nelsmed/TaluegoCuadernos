@@ -116,9 +116,17 @@ body {
     padding: 10px;
     background-color: $bgBody;
     text-align: justify;
-    color: $colorLogo;
-    font-weight: 700;
+    color: $textos;
+    font-weight: 500;
     font-size: 1.2rem;
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 2px solid $colorLogo;
+    h3 {
+        color: $subTitulos;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
 }
 .botonResponsive{
     border: 2px solid $colorLogo;
@@ -143,6 +151,7 @@ body {
 }
 
 /* Seccion Redes */    
+
 .redesig__titulo {
     display: flex;
     flex-wrap: wrap;
@@ -160,6 +169,17 @@ body {
         width: 60px;
         height: 60px;
         background-color:$bgTitulos;
+    }
+}
+.redesig__embed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    align-content: center;
+    iframe {
+        margin: 10px;
     }
 }
 
@@ -305,9 +325,16 @@ a:hover .producto__btn {
     position: sticky;
     top: 0;
     min-height: 100vh;
-    img {
-        border-radius: 50%;
-        width: 200px;
+    .encuadernacionTipo__contenedor {
+        width: 40%;
+        margin: auto;
+        img {
+            border-radius: 50%;
+            width: 200px;
+        }
+        .encuadernacionTipo__contenedor--tit {
+            text-align: center;
+        }
     }
 }
 #seccionUno {
@@ -400,26 +427,43 @@ section div img {
 /* ----------------------------------------------------------------Contacto------------------------------------------------------------- */
 .contacto {
     background-color:$bgBody;
-    .contacto__titulo {
-        @include titulos ($bgBody);
-        display: flex;
-        justify-content: start;
-        margin: 0 5px;
-        color: #a7a7a7  ;
-    }
-}
-.contacto__consulta {
-    width: 70%;
-    height: 200px;
+    height: 100vh;
+    padding-top: 10vh;
 }
 .contacto__formulario {
     padding: 10px;
+}
+    .contacto__titulo {
+    @include titulos ($bgBody);
+    margin: 15px;
+    color: #a7a7a7;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    input, textarea, select{
+        width: 60%;
+        margin: 15px auto;
+        border: none;
+        background-color: $bgBody;
+        border-bottom: 1.5px solid $colorLogo;
+        
+    }
+    textarea {
+        height: 100px;
+    }
 }
 .contacto__formulario--btn {
     width: 100px;
     color: white;
     background-color: #ec8ea2;
     border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px #a7a7a7;
+    margin: auto;
+}
+.contacto__formulario--btn:hover {
+    box-shadow: none;
 }
 
 

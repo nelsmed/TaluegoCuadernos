@@ -417,9 +417,21 @@ body {
   padding: 10px;
   background-color: #f6f5dd;
   text-align: justify;
-  color: #43bda0;
-  font-weight: 700;
+  color: #a7a7a7;
+  font-weight: 500;
   font-size: 1.2rem;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-column-rule: 2px solid #43bda0;
+          column-rule: 2px solid #43bda0;
+}
+
+.nos__contenedor--modp h3 {
+  color: #343434;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .botonResponsive {
@@ -474,6 +486,27 @@ body {
   width: 60px;
   height: 60px;
   background-color: #43bda0;
+}
+
+.redesig__embed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.redesig__embed iframe {
+  margin: 10px;
 }
 
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
@@ -644,9 +677,18 @@ a:hover .producto__btn {
   min-height: 100vh;
 }
 
-.encuadernacionTipo img {
+.encuadernacionTipo .encuadernacionTipo__contenedor {
+  width: 40%;
+  margin: auto;
+}
+
+.encuadernacionTipo .encuadernacionTipo__contenedor img {
   border-radius: 50%;
   width: 200px;
+}
+
+.encuadernacionTipo .encuadernacionTipo__contenedor .encuadernacionTipo__contenedor--tit {
+  text-align: center;
 }
 
 #seccionUno {
@@ -771,29 +813,42 @@ section div img {
 /* ----------------------------------------------------------------Contacto------------------------------------------------------------- */
 .contacto {
   background-color: #f6f5dd;
-}
-
-.contacto .contacto__titulo {
-  text-align: center;
-  color: white;
-  background-color: #f6f5dd;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  margin: 0 5px;
-  color: #a7a7a7;
-}
-
-.contacto__consulta {
-  width: 70%;
-  height: 200px;
+  height: 100vh;
+  padding-top: 10vh;
 }
 
 .contacto__formulario {
   padding: 10px;
+}
+
+.contacto__titulo {
+  text-align: center;
+  color: white;
+  background-color: #f6f5dd;
+  margin: 15px;
+  color: #a7a7a7;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form input, form textarea, form select {
+  width: 60%;
+  margin: 15px auto;
+  border: none;
+  background-color: #f6f5dd;
+  border-bottom: 1.5px solid #43bda0;
+}
+
+form textarea {
+  height: 100px;
 }
 
 .contacto__formulario--btn {
@@ -801,6 +856,15 @@ section div img {
   color: white;
   background-color: #ec8ea2;
   border-radius: 15px;
+  border: none;
+  -webkit-box-shadow: 1px 1px #a7a7a7;
+          box-shadow: 1px 1px #a7a7a7;
+  margin: auto;
+}
+
+.contacto__formulario--btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
