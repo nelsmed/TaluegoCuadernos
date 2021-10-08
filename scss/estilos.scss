@@ -53,6 +53,11 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.bannerhome__tarjeta--titv2 { /* clase creada para que entre h3 */
+    font-size: 1.45rem;
+    padding-top: 4px;
+
+}
 .bannerhome__tarjeta--img {
     width: 100%;
     border-top-left-radius:10px ;
@@ -84,7 +89,7 @@ body {
     .nos__contenedor--link{
         text-decoration: none;
         color: white;
-        font-size: 25px;
+        font-size: 1.3rem;
         border: 2px solid white;
         font-weight: 800;
         border-radius: 10px;
@@ -113,23 +118,28 @@ body {
     text-align: justify;
     color: $colorLogo;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 .botonResponsive{
-    color: $colorLogo;
-    font-size: 20px;
     border: 2px solid $colorLogo;
-    font-weight: 800;
     border-radius: 10px;
-    background-color: $bgBody;
     text-align: center;
-    width: 40%;
+    width: 20%;
     margin: auto;
+    background-color: $colorLogo;
+    a {
+        font-weight: 800;
+        color: white;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
 }
     
 .botonResponsive:hover {
     background-color: white;
-    color: $colorLogo;
+    a {
+        color: $colorLogo;
+    }
 }
 
 /* Seccion Redes */    
@@ -387,16 +397,46 @@ section div img {
     text-align: center;
 }
 
+/* ----------------------------------------------------------------Contacto------------------------------------------------------------- */
+.contacto {
+    background-color:$bgBody;
+    .contacto__titulo {
+        @include titulos ($bgBody);
+        display: flex;
+        justify-content: start;
+        margin: 0 5px;
+        color: #a7a7a7  ;
+    }
+}
+.contacto__consulta {
+    width: 70%;
+    height: 200px;
+}
+.contacto__formulario {
+    padding: 10px;
+}
+.contacto__formulario--btn {
+    width: 100px;
+    color: white;
+    background-color: #ec8ea2;
+    border-radius: 15px;
+}
+
+
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
 
-/* Productos */
 
 
 @media (max-width: 769px) {
-    
+    /* INDEX */    
     .nos__contenedor--modp {
-        font-size: 12px;
+        font-size: 14px;
     }
+    .botonResponsive a {
+        font-size: 1rem;
+    }
+
+    /* Productos */
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
@@ -445,6 +485,12 @@ section div img {
     }
 }
 @media (max-width: 426px) {
+    /* INDEX */
+    .botonResponsive a {
+        font-size: 12px;
+        margin: auto;
+    }
+    /* PRODUCTOS */
     $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/libreria.jpg));
     @each $producto, $url in $tipoProducto {
         .#{$producto} {
@@ -525,6 +571,7 @@ section div img {
 }
 @media (max-width: 376px) {
    
+    
     .producto__descripcion {
         width: 300px;
         left: 10%;

@@ -9,11 +9,12 @@
         <title>Contacto | Ta Luego</title>
         <link rel="stylesheet" href="../CSS/estilos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https  ://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/99c6c0aaff.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    </head>
+        <link rel="shortcut icon" href="logoSinFondo.png">
+    </head>     
     <body>
         <header class="header"> 
             <h1 class="logo">
@@ -39,7 +40,7 @@
                         <li class="menu__submenu--item"><a href="./Pizarras.html">PIAZARRAS</a></li>
                     </ul>
                 </li>
-                <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
+                <li class="menu__item"><a href="./Contacto.html">CONTACTO</a></li>
             </ul>
             <div class="logoNav">
                 <a href="../Index.html" class="logoNav__link" >
@@ -47,27 +48,30 @@
                 </a>
             </div>    
         </nav>
-        <main>
-            <h1>Contacto</h1>
-            <fieldset>
-                <legend >Contactese con nosotros</legend>
-                <form action="xxx.html" method="GET">
-                    <label for="E-Mail">E-Mail</label>
-                    <input type="email" placeholder="Ingrese su E-Mail" >
-                    <label for="Tipo de producto">Producto a consultar:</label>
-                    <select name="Tipo de producto" id="Tipo de producto">
-                        <option value="Cuadernos A4">Agenda 2022</option>
-                        <option value="Cuadernos A5">Recetario</option>
-                        <option value="Anotadores">Otros</option>
-                        <option value="None" selected>None</option>
-                    </select>
-                    <textarea name="Consulta" id="Consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
-                        Marque la casilla si quiere recibir informacion en su mail (Ofertas, promociones, novedades)
-                    <input type="checkbox" name="Newsletter">
-                    <input type="submit" value="Enviar Ahora">
-                    <input type="reset" value="Limpiar Formulario">
-                </form>
-            </fieldset>
+        <main class="contacto">
+            <h2 class="contacto__titulo">Contacto</h2>
+            <div class="container contacto__formulario">
+                <form name="gform" class="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeKY0_P-nbVARlGZWuFQbNaXaEWktL0DQUauu2hRSIp_cyPBQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="container">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="col-5 m-1"><input type="email" name="entry.1440515833" required=true id="entry.1440515833" placeholder="email" /></div>
+                            <div class="col-5 m-1"><input type="text" name="entry.1106854471" required=true id="entry.entry.1106854471" placeholder="Nombre" /></div>
+                        </div>
+                            <div class="col-6 m-1">
+                                <select name="entry.77016113" id="entry.77016113">
+                                    <option>Cuadernos A4</option>
+                                    <option>Cuadernos A5</option>
+                                    <option>Pizarras</option>
+                                    <option selected>Varios</option>
+                                </select>
+                            </div>
+                            <div class="col-12 m-1"><textarea type="text" name="entry.772175219" required=true id="entry.772175219" placeholder="Consulta" class="contacto__consulta"></textarea> </div>
+                            <input type="submit" class="primary contacto__formulario--btn m-1" value="Enviar">
+                        </div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer>
             <div id="contacto">
@@ -86,5 +90,7 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="../jquery.min.js"></script>
+        <script src="../forms.js"></script>
     </body>
 </html>

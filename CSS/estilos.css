@@ -342,6 +342,12 @@ body {
   border-bottom-right-radius: 10px;
 }
 
+.bannerhome__tarjeta--titv2 {
+  /* clase creada para que entre h3 */
+  font-size: 1.45rem;
+  padding-top: 4px;
+}
+
 .bannerhome__tarjeta--img {
   width: 100%;
   border-top-left-radius: 10px;
@@ -383,7 +389,7 @@ body {
 .nos__contenedor--animacion .nos__contenedor--link {
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 1.3rem;
   border: 2px solid white;
   font-weight: 800;
   border-radius: 10px;
@@ -413,23 +419,30 @@ body {
   text-align: justify;
   color: #43bda0;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .botonResponsive {
-  color: #43bda0;
-  font-size: 20px;
   border: 2px solid #43bda0;
-  font-weight: 800;
   border-radius: 10px;
-  background-color: #f6f5dd;
   text-align: center;
-  width: 40%;
+  width: 20%;
   margin: auto;
+  background-color: #43bda0;
+}
+
+.botonResponsive a {
+  font-weight: 800;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
 .botonResponsive:hover {
   background-color: white;
+}
+
+.botonResponsive:hover a {
   color: #43bda0;
 }
 
@@ -755,12 +768,51 @@ section div img {
   text-align: center;
 }
 
+/* ----------------------------------------------------------------Contacto------------------------------------------------------------- */
+.contacto {
+  background-color: #f6f5dd;
+}
+
+.contacto .contacto__titulo {
+  text-align: center;
+  color: white;
+  background-color: #f6f5dd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: 0 5px;
+  color: #a7a7a7;
+}
+
+.contacto__consulta {
+  width: 70%;
+  height: 200px;
+}
+
+.contacto__formulario {
+  padding: 10px;
+}
+
+.contacto__formulario--btn {
+  width: 100px;
+  color: white;
+  background-color: #ec8ea2;
+  border-radius: 15px;
+}
+
 /* --------------------------------------------------------------- Responsive ------------------------------------------------------- */
-/* Productos */
 @media (max-width: 769px) {
+  /* INDEX */
   .nos__contenedor--modp {
-    font-size: 12px;
+    font-size: 14px;
   }
+  .botonResponsive a {
+    font-size: 1rem;
+  }
+  /* Productos */
   .cuadernoA4 {
     background-size: 400px;
   }
@@ -809,6 +861,12 @@ section div img {
 }
 
 @media (max-width: 426px) {
+  /* INDEX */
+  .botonResponsive a {
+    font-size: 12px;
+    margin: auto;
+  }
+  /* PRODUCTOS */
   .cuadernoA4 {
     background-size: 300px;
   }
