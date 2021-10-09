@@ -203,14 +203,14 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
 }
 @mixin pseudos {
     content: "";
-    width: 100%;
+    width: 100%;  
     height: 200px;
     background-color: $bgSectionColor;
     position: absolute;
     transition: all 0.5s;
     z-index: 7;
 }
-    
+   
 .contenedor {
     overflow: hidden;
     position: absolute;
@@ -263,25 +263,24 @@ a:hover .producto__btn {
 
 }
 
-.producto__titulo {
-    @include titulos (#ec8ea2);
-    width: 230px;
-    position: absolute;
-    left: 25%;
-    top: 12%;
-    z-index: 4;
-    border-radius: 5px;
-    box-shadow: -4px 4px 11px 0px #ec8ea2;
-}
-       
-.producto__titulo--modtit {
-    font-size: 1rem;
-}
-.producto__imagen {
-    position:absolute;
-    left: 30%;
-    bottom: 15%;
-    z-index: 2;
+.producto__contenedor {
+    position: relative;
+    height: 600px;    
+    .producto__titulo {
+        @include titulos (#ec8ea2);
+        width: 230px;
+        position: absolute;
+        left: 25%;
+        top: 12%;
+        z-index: 4;
+        border-radius: 5px;
+        box-shadow: -4px 4px 11px 0px #ec8ea2;
+    }
+    
+    .producto__titulo--modtit {
+        font-size: 1rem;
+    }
+    
 }
     
     
@@ -611,7 +610,13 @@ form{
            
         }  
         
-    }    
+    }
+    /* Contacto */
+    form  input, form textarea, form select {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
 }
 @media (max-width: 376px) {
    
