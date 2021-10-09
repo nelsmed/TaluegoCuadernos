@@ -687,7 +687,7 @@ body {
 }
 
 .pizarra {
-  background: url(../img/paginaProductos/pizarraProductos.jpeg);
+  background: url(../img/paginaProductos/pizarraProductos.jpg);
   background-position: center;
   background-size: 500px;
   border-radius: 10px;
@@ -873,6 +873,14 @@ a:hover .producto__btn {
   background-color: #43bda0;
   z-index: 2;
   padding: 10px;
+}
+
+.interior__agenda {
+  width: 300px;
+}
+
+.interior__agenda .interior__agenda--img {
+  width: 300px;
 }
 
 section div img {

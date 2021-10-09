@@ -184,12 +184,12 @@ body {
 }
 
 /* --------------------------------------------Estilos Productos------------------------------------------------------- */
-$tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/pizarraProductos.jpeg));
+$tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuadernoA5": url(../img/paginaProductos/CuadernoA5.jpg), "pizarra" : url(../img/paginaProductos/pizarraProductos.jpg));
 
 @each $producto, $url in $tipoProducto {
     .#{$producto} {
         background: $url;
-        background-position: center;
+        background-position:center;
         background-size: 500px;
         border-radius: 10px;
         
@@ -231,8 +231,8 @@ $tipoProducto: ("cuadernoA4": url(../img/paginaProductos/CuadernoA4.jpg), "cuade
         top: 100%;
     }
 }
-    
-    
+
+   
     
 .contenedor:hover:before {
     transform: scale(1) translateY(100%);
@@ -359,7 +359,16 @@ a:hover .producto__btn {
     z-index: 2;
     padding: 10px;
    
-}    
+}
+
+
+.interior__agenda {
+    width: 300px;
+    .interior__agenda--img {
+        width: 300px;
+    }
+}
+     
 section div img {
     width: 80%;
 }
