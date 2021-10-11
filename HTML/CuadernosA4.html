@@ -5,19 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Con el fin de adaptarnos a las necesidades de nuestros clientes creamos estos cuadernos A4, para quienes necesiten mas espacio">
-        <meta name="keywords" content="Agenda, Universitarios, Docentes, Emprendedor, Organizador, Semanal, A4"> 
+        <meta name="keywords" content="Agenda, Anillado, Docentes, Emprendedor, Organizador, Semanal, A4"> 
         <title>Cuadernos A4 | Ta Luego</title>
-        <link rel="stylesheet" href="../CSS/estilos.css">
+        <link rel="icon" href="../img/favicon.ico">   
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/99c6c0aaff.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/estilos.css">
     </head>
     <body>
         <header class="header"> 
             <h1 class="logo">
-                <a href="../Index.html" class="logo__link" >
+                <a href="../index.html" class="logo__link" >
                     <img src="../img/logoSinFondo.png" alt="Ta Luego Cuadernos" class="logo__link--posicion">
                 </a>
             </h1>
@@ -36,10 +37,10 @@
                     <ul class="menu__submenu">
                         <li class="menu__submenu--item"><a href="./CuadernosA4.html">CUADERNOS A4</a></li>
                         <li class="menu__submenu--item"><a href="./CuadernosA5.html">CUADERNOS A5</a></li>
-                        <li class="menu__submenu--item"><a href="./Pizarras.html">PIAZARRAS</a></li>
+                        <li class="menu__submenu--item"><a href="./Pizarras.html">PIZARRAS</a></li>
                     </ul>
                 </li>
-                <li class="menu__item"><a href="./HTML/Contacto.html">CONTACTO</a></li>
+                <li class="menu__item"><a href="./Contacto.html">CONTACTO</a></li>
             </ul>
             <div class="logoNav">
                 <a href="../Index.html" class="logoNav__link" >
@@ -50,62 +51,88 @@
         <main class="main">
             <h2 class="main__titulo--modtit">CUADERNOS A4</h2>
             <!-- Tipos de encuadernaciones -->
-            <section class="encuadernacionTipo d-grid"> 
-                <div class="encuadernacionTipo__contenedor">
-                    <div class="row m-auto">
-                        <h3 class="encuadernacionTipo__contenedor--tit" id="seccionUno">Tipos de Encuadernación</h3>
+            <section class="encuadernacionTipo" > 
+                <div class="encuadernacionTipo__tit">
+                    <h3>Tipos de Encuadernación</h3>
+                </div>
+                <div class="encuadernacionTipo__contenedor  d-flex flex-column flex-md-row justify-content-center my-5">
+                    <div class="encuadernacionTipo__contenedor--tarjeta d-flex flex-column mx-3 my-3 col-10 col-md-4">
+                        <img src="../img/circuloAnillado.jpg" alt="Imagen encuadernacion Anillado" class="mx-auto">
+                        <h4>Anillado doble Ring</h4>
+                        <!-- Descripción del tipo de encuadernacion -->
+                        <p class="text-justify ">El anillado doble ring, consiste en la colocación de anillos dobles metálicos, sobre perforaciones rectangulares en tapas rígidas. Nuestros cuadernos son realizados en cartón de 2 mm, y utilizamos tanto papeles de encuadernación como impresiones, lo que nos permite confeccionar el cuaderno que desees.</p>
                     </div>
-                    <div class="row">
-                        <img src="../img/circuloAnillado.jpg" alt="Imagen encuadernacion Anillado" class="m-auto">
-                    </div>
-                    <h4 class=" row m-auto">Anillado doble Ring</h4>
-                    <!-- Descripción del tipo de encuadernacion -->
-                    <p class="row text-justify m-3 w-40">El anillado doble ring, consiste en la colocación de anillos dobles metálicos, sobre perforaciones rectangulares en tapas rígidas. Nuestros cuadernos son realizados en cartón de 2 mm, y utilizamos tanto papeles de encuadernación como impresiones, lo que nos permite confeccionar el cuaderno que desees.</p>
                 </div>
             </section>
             <!-- Interiores de cuadernos -->
-            <section class="interiores d-grid justify-content-around">
-                <div class="row m-4">
-                    <h2 class="titulosPageA4" id="seccionDos">Interiores</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-6 col-md-4">
-                        <img src="../img/DOCENTE.jpg" alt="Agenda Docente" id="agendaDocente">
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <img src="../img/agendaEmprender.jpg" alt="Empreder" id="emprender">
-                    </div>
-                    <div id="carouselExampleControls" class="carousel slide interior__agenda col-6 col-md-4" data-bs-ride="carousel">
+            <section class="interior d-flex flex-column" >
+                <h3 class="interior__titulo" id="seccionDos">Interiores</h3>
+                <div class="interior__contenedor d-md-flex justify-content-around m-auto flex-wrap">
+                    <!-- Carousel Agenda Docente -->
+                    <div id="carouselExampleControls" class="carousel slide interior__carousel col-8 col-md-4 d-flex align-items-center" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../img/Interiores/Agenda/uno.jpg" class="d-block w-10 interior__agenda--img"  alt="Imagen de interior de agenda de Ta luego">
+                                <h4 class="text-center interior__carousel--tit">Agenda Docente</h4>
+                                <img src="../img/Interiores/agendaDocente/1.jpg" class="d-block w-10 interior__carousel--img"  alt="Imagen de interior de agenda de Ta luego">
                             </div>
                             <div class="carousel-item">
-                                <img src="../img/Interiores/Agenda/dos.jpg" class="d-block w-10 interior__agenda--img" alt="Imagen de interior de agenda de Ta luego">
+                                <h5 class="text-center interior__carousel--tit">Agenda Docente</h5>
+                                <img src="../img/Interiores/agendaDocente/2.jpg" class="d-block w-10 interior__carousel--img" alt="Imagen de interior de agenda de Ta luego">
                             </div>
                             <div class="carousel-item">
-                                <img src="../img/Interiores/Agenda/tres.jpg" class="d-block w-10 interior__agenda--img" alt="Imagen de interior de agenda de Ta luego">
+                                <h6 class="text-center interior__carousel--tit">Agenda Docente</h6>
+                                <img src="../img/Interiores/agendaDocente/3.jpg" class="d-block w-10 interior__carousel--img" alt="Imagen de interior de agenda de Ta luego">
+                            </div>
+                            <div class="carousel-item">
+                                <h6 class="text-center interior__carousel--tit">Agenda Docente</h6>
+                                <img src="../img/Interiores/agendaDocente/4.jpg" class="d-block w-10 interior__carousel--img" alt="Imagen de interior de agenda de Ta luego">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                   
+                   <!-- Carousel Agenda 2022 -->
+                    <div id="carouselExampleControls1" class="carousel slide interior__carousel col-8 col-md-4" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h4 class="text-center interior__carousel--tit">Agenda 2022</h4>
+                                <img src="../img/Interiores/Agenda/uno.jpg" class="d-block w-10 interior__carousel--img"  alt="Imagen de interior de agenda de Ta luego">
+                            </div>
+                            <div class="carousel-item">
+                                <h5 class="text-center interior__carousel--tit">Agenda 2022</h5>
+                                <img src="../img/Interiores/Agenda/dos.jpg" class="d-block w-10 interior__carousel--img" alt="Imagen de interior de agenda de Ta luego">
+                            </div>
+                            <div class="carousel-item">
+                                <h6 class="text-center interior__carousel--tit">Agenda 2020</h6>
+                                <img src="../img/Interiores/Agenda/tres.jpg" class="d-block w-10 interior__carousel--img" alt="Imagen de interior de agenda de Ta luego">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
             </section>
             <!-- Galeria de imagenes -->    
-            <section class="galeria">
-                <div class="galeria__contenedor">
-                    <h2 class="galeria__contenedor--tit titulosPageA4" id="seccionTres">Galeria de imágenes</h2>
+            <section class="galeria d-flex flex-column" >
+                <h2 class="galeria__titulo" id="seccionTres">Galeria de imágenes</h2>
+                <div class="galeria__contenedor container d-flex flex-wrap justify-content-center align-items-center">
+                    <img src="../img/cuadenosA4/A4Uno.jpg" alt="Cuadernos A4 Agenda" class="col-8 col-md-3 m-2 rounded-2 ml-auto mr-auto my-2 ">
+                    <img src="../img/cuadenosA4/A4Dos.jpg" alt="Cuadernos A4 Docente" class="col-8 col-md-3 m-2 rounded-2 ml-auto mr-auto my-2">
+                    <img src="../img/cuadenosA4/A4Tres.jpg" alt="Cuadernos A4 Perpetua" class="col-8 col-md-3 m-2 rounded-2 ml-auto mr-auto my-2">
                 </div>
-                <img src="../img/paginaA4/agendaDocente.jpg" alt="Agenda Docente" class="agendaDocente"  >
-                <img src="../img/paginaA4/agendaEmprender.jpg" alt="Empreder" class="emprender">
-                <img src="../img/paginaA4/agendaExterior.jpeg" alt="Agenda" class="agenda">
             </section>
 
         </main>
